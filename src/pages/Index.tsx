@@ -8,7 +8,7 @@ import { ShopifyProduct, getProducts } from "@/lib/shopify";
 import { Loader2, Package } from "lucide-react";
 import logo from "@/assets/logo.png";
 import logoHero from "@/assets/logo-hero.png";
-import heroImage from "@/assets/hero-grass-kids.jpg";
+import heroImage from "@/assets/hero-kids-uniforms.png";
 
 const Index = () => {
   const [products, setProducts] = useState<ShopifyProduct[]>([]);
