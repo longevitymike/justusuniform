@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { ProductCard } from "@/components/ProductCard";
 import { EmailSignup } from "@/components/EmailSignup";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
+import { LogoLoop } from "@/components/LogoLoop";
 import { ShopifyProduct, getProducts } from "@/lib/shopify";
 import { Loader2, Package } from "lucide-react";
 import logo from "@/assets/logo.png";
@@ -91,6 +92,26 @@ const Index = () => {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Logo Loop */}
+      <section className="section-padding border-y bg-card/20">
+        <div className="container mx-auto container-spacing">
+          <LogoLoop
+            logos={[
+              "Dress Code Approved ✓",
+              "1,274+ Parent Tests",
+              "37 Schools",
+              "Recess-Proof",
+              "Stain-Resistant",
+              "Tag-Free Comfort",
+            ]}
+            speed={50}
+            logoHeight={32}
+            gap={80}
+            hoverSpeed={10}
+          />
         </div>
       </section>
 
