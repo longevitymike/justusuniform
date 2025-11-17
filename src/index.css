@@ -6,11 +6,20 @@
 All colors MUST be HSL.
 */
 
+@font-face {
+  font-family: 'Supreme';
+  src: url('/fonts/Supreme-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     /* Fonts */
     --font-headline: 'Fredoka', sans-serif;
     --font-body: 'Work Sans', sans-serif;
+    --font-supreme: 'Supreme', sans-serif;
     
     /* Brand Colors - Just Us Uniform */
     --brand-orange: 28 100% 56%; /* #FF9E1B - Pantone 1375C */

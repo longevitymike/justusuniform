@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         'headline': ['Fredoka', 'sans-serif'],
         'body': ['Work Sans', 'sans-serif'],
+        'supreme': ['Supreme', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

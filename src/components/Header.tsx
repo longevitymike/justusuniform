@@ -10,6 +10,7 @@ export const Header = () => {
       <div className="container mx-auto container-spacing py-3 lg:py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity tap-target" aria-label="Go to homepage">
           <img src={logo} alt="Just Us Uniform" className="h-10 w-10 lg:h-12 lg:w-12 rounded-full" />
+          <span className="font-supreme text-2xl lg:text-3xl text-foreground tracking-tight">JUST US</span>
         </Link>
         
         <nav className="flex items-center gap-2 lg:gap-4" aria-label="Main navigation">
