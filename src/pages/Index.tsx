@@ -51,7 +51,7 @@ const Index = () => {
               />
             </div>
             <p className="body-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Fun and stylish uniform pants where comfort meets confidence
+              Premium school uniform pants—designed by kids, for kids—for all‑day comfort and confidence.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center pt-4 lg:pt-6">
@@ -84,25 +84,33 @@ const Index = () => {
             <p className="body-lg text-muted-foreground leading-relaxed">
               At Just Us, we believe every child deserves to <span className="text-primary font-semibold">sparkle in comfort and style</span>. 
               Our playful yet sleek pants are crafted with high-quality materials, ensuring durability and all-day comfort. 
-              Designed for kids who want to stand out and feel confident, Just Us makes every pair an expression of fun and individuality.
+              From school to play, Just Us empowers kids to be themselves and feel special every day.
+            </p>
+            <p className="text-base lg:text-lg font-semibold text-foreground">
+              Free 30‑day exchanges. Made to outlast recess.
             </p>
           </div>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-6xl mx-auto">
+            <div className="premium-card text-center space-y-4 p-6 lg:p-8 group">
+              <div className="text-5xl lg:text-6xl transition-transform duration-300 group-hover:scale-110">🏃</div>
+              <h3 className="font-bold text-lg lg:text-xl">Built to Move</h3>
+              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">Flexible fabric that moves with your child through every activity</p>
+            </div>
             <div className="premium-card text-center space-y-4 p-6 lg:p-8 group">
               <div className="text-5xl lg:text-6xl transition-transform duration-300 group-hover:scale-110">✨</div>
-              <h3 className="font-bold text-lg lg:text-xl">Stylish & Trendy</h3>
-              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">Playful designs that let kids express their unique personality and stand out</p>
+              <h3 className="font-bold text-lg lg:text-xl">Stain‑resistant</h3>
+              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">Advanced fabric protection keeps them looking fresh all day</p>
             </div>
             <div className="premium-card text-center space-y-4 p-6 lg:p-8 group">
-              <div className="text-5xl lg:text-6xl transition-transform duration-300 group-hover:scale-110">💪</div>
-              <h3 className="font-bold text-lg lg:text-xl">Built to Last</h3>
-              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">Durable, high-quality materials ready for every adventure and playtime</p>
+              <div className="text-5xl lg:text-6xl transition-transform duration-300 group-hover:scale-110">🏷️</div>
+              <h3 className="font-bold text-lg lg:text-xl">Tag‑free waistband</h3>
+              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">No scratchy tags, just all-day comfort and ease</p>
             </div>
-            <div className="premium-card text-center space-y-4 p-6 lg:p-8 group sm:col-span-2 lg:col-span-1">
-              <div className="text-5xl lg:text-6xl transition-transform duration-300 group-hover:scale-110">🎯</div>
-              <h3 className="font-bold text-lg lg:text-xl">Confidence Boost</h3>
-              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">Empowering kids to feel special and confident in their everyday wear</p>
+            <div className="premium-card text-center space-y-4 p-6 lg:p-8 group">
+              <div className="text-5xl lg:text-6xl transition-transform duration-300 group-hover:scale-110">📏</div>
+              <h3 className="font-bold text-lg lg:text-xl">'Fits‑Right' size chart</h3>
+              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">Accurate sizing designed specifically for active kids</p>
             </div>
           </div>
         </div>
