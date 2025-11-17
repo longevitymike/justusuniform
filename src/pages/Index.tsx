@@ -5,7 +5,7 @@ import { EmailSignup } from "@/components/EmailSignup";
 import { ShopifyProduct, getProducts } from "@/lib/shopify";
 import { Loader2, Package } from "lucide-react";
 import logo from "@/assets/logo.png";
-import heroImage from "@/assets/hero-kids-playing.jpg";
+import heroImage from "@/assets/hero-grass-kids.jpg";
 
 const Index = () => {
   const [products, setProducts] = useState<ShopifyProduct[]>([]);
@@ -41,10 +41,6 @@ const Index = () => {
         
         <div className="container mx-auto container-spacing relative z-10 text-center">
           <div className="max-w-5xl mx-auto space-y-6 lg:space-y-8">
-            <div className="inline-block bg-accent text-accent-foreground px-5 py-2.5 rounded-full text-sm sm:text-base font-bold mb-4 animate-bounce tap-target">
-              Coming Soon! 🎉
-            </div>
-            
             <h1 className="heading-xl mb-6 lg:mb-8">
               Just Us Uniform
             </h1>
