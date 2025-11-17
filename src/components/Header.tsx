@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import { CartDrawer } from "./CartDrawer";
-import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export const Header = () => {
   return (
@@ -28,7 +27,6 @@ export const Header = () => {
           <Link to="/contact" className="text-sm lg:text-base font-medium hover:text-primary transition-colors hidden lg:block tap-target px-2 py-2">
             Contact
           </Link>
-          <ThemeSwitcher />
           <CartDrawer />
         </nav>
       </div>

@@ -48,10 +48,10 @@ const Index = () => {
               Fun and stylish uniform pants where comfort meets confidence
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 lg:pt-6">
+            <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center pt-4 lg:pt-6">
               <a 
                 href="/product/just-us-uniform-pants"
-                className="inline-flex items-center justify-center tap-target h-14 sm:h-16 px-8 lg:px-10 rounded-full bg-primary text-primary-foreground font-bold text-base sm:text-lg shadow-[0_8px_32px_-8px_hsl(var(--primary)/0.4)] hover:shadow-[0_12px_48px_-8px_hsl(var(--primary)/0.5)] transition-all duration-300 hover:-translate-y-1"
+                className="group relative inline-flex items-center justify-center tap-target h-14 sm:h-16 px-8 lg:px-12 bg-primary text-primary-foreground font-bold text-base sm:text-lg border-4 border-foreground uppercase tracking-wider transition-all duration-200 hover:translate-x-1 hover:translate-y-1 shadow-[4px_4px_0px_0px_hsl(var(--foreground))] hover:shadow-[0px_0px_0px_0px_hsl(var(--foreground))]"
                 aria-label="Shop now"
               >
                 Shop Now
@@ -60,7 +60,7 @@ const Index = () => {
                 href={import.meta.env.VITE_AMAZON_STORE_URL || "#"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center tap-target h-14 sm:h-16 px-8 lg:px-10 rounded-full bg-secondary text-secondary-foreground font-bold text-base sm:text-lg shadow-[0_8px_32px_-8px_hsl(var(--foreground)/0.1)] hover:shadow-[0_12px_48px_-8px_hsl(var(--foreground)/0.15)] transition-all duration-300 hover:-translate-y-1"
+                className="group relative inline-flex items-center justify-center tap-target h-14 sm:h-16 px-8 lg:px-12 bg-background text-foreground font-bold text-base sm:text-lg border-4 border-foreground uppercase tracking-wider transition-all duration-200 hover:translate-x-1 hover:translate-y-1 shadow-[4px_4px_0px_0px_hsl(var(--foreground))] hover:shadow-[0px_0px_0px_0px_hsl(var(--foreground))]"
                 aria-label="Buy on Amazon"
               >
                 Buy on Amazon
