@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import { CartDrawer } from "./CartDrawer";
+import { ScrollingBanner } from "./ScrollingBanner";
 
 export const Header = () => {
   return (
@@ -29,6 +30,7 @@ export const Header = () => {
           </Link>
           <CartDrawer />
         </nav>
+        </div>
       </div>
     </header>
   );
