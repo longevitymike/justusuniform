@@ -64,7 +64,7 @@ export const EmailSignup = ({ variant = 'pill' }: EmailSignupProps) => {
               Join the Club! 🎉
             </h2>
             <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-              Sign up for exclusive prizes, rewards, and first access to new styles
+              Get exclusive prizes, rewards, and early access to new styles. Join our community of parents dressing the future with confidence!
             </p>
           </div>
           
