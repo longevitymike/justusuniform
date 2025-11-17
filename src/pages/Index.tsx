@@ -51,7 +51,7 @@ const Index = () => {
               />
             </div>
             <p className="body-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Premium school uniform pants—designed by kids, for kids—for all‑day comfort and confidence.
+              Recess-proof school pants. Stain-resistant, tag-free, 'fits-right' sizing. Free 30-day exchanges.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center pt-4 lg:pt-6">
