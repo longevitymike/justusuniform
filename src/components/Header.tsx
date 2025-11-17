@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import { CartDrawer } from "./CartDrawer";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export const Header = () => {
   return (
@@ -14,16 +15,20 @@ export const Header = () => {
           </div>
         </Link>
         
-        <nav className="flex items-center gap-6">
-          <Link to="/" className="text-sm font-medium hover:text-primary transition">
+        <nav className="flex items-center gap-4">
+          <Link to="/" className="text-sm font-medium hover:text-primary transition hidden sm:block">
             Shop
           </Link>
-          <Link to="/size-guide" className="text-sm font-medium hover:text-primary transition">
+          <Link to="/size-guide" className="text-sm font-medium hover:text-primary transition hidden sm:block">
             Size Guide
           </Link>
-          <Link to="/faq" className="text-sm font-medium hover:text-primary transition">
+          <Link to="/faq" className="text-sm font-medium hover:text-primary transition hidden sm:block">
             FAQ
           </Link>
+          <Link to="/contact" className="text-sm font-medium hover:text-primary transition hidden sm:block">
+            Contact
+          </Link>
+          <ThemeSwitcher />
           <CartDrawer />
         </nav>
       </div>

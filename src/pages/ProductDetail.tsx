@@ -5,8 +5,11 @@ import { Button } from "@/components/ui/button";
 import { getProductByHandle } from "@/lib/shopify";
 import { useCartStore } from "@/stores/cartStore";
 import { toast } from "sonner";
-import { Loader2, ShoppingCart, Truck, RefreshCw, Shield } from "lucide-react";
+import { Loader2, ShoppingCart, Truck, RefreshCw, Shield, ExternalLink } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
+const PRIMARY_CTA = import.meta.env.VITE_PRIMARY_CTA || 'shopify';
+const AMAZON_URL = import.meta.env.VITE_AMAZON_STORE_URL || '';
 
 const ProductDetail = () => {
   const { handle } = useParams<{ handle: string }>();
@@ -169,15 +172,31 @@ const ProductDetail = () => {
             </div>
 
             {/* Add to Cart */}
-            <Button
-              size="lg"
-              className="w-full text-lg py-6"
-              onClick={handleAddToCart}
-              disabled={!selectedVariant}
-            >
-              <ShoppingCart className="mr-2 h-5 w-5" />
-              Add to Cart - ${selectedVariant ? parseFloat(selectedVariant.price.amount).toFixed(2) : '0.00'}
-            </Button>
+            {PRIMARY_CTA === 'amazon' ? (
+              <div className="space-y-3">
+                <Button 
+                  size="lg" 
+                  className="w-full text-lg py-6"
+                  onClick={() => window.open(AMAZON_URL, '_blank')}
+                >
+                  <ExternalLink className="mr-2 h-5 w-5" />
+                  Buy on Amazon
+                </Button>
+                <p className="text-xs text-center text-muted-foreground">
+                  Available now on Amazon
+                </p>
+              </div>
+            ) : (
+              <Button
+                size="lg"
+                className="w-full text-lg py-6"
+                onClick={handleAddToCart}
+                disabled={!selectedVariant}
+              >
+                <ShoppingCart className="mr-2 h-5 w-5" />
+                Add to Cart - ${selectedVariant ? parseFloat(selectedVariant.price.amount).toFixed(2) : '0.00'}
+              </Button>
+            )}
 
             {/* Features */}
             <div className="grid grid-cols-3 gap-4 pt-6 border-t">
