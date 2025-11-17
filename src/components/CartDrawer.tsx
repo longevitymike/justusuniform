@@ -12,6 +12,11 @@ export const CartDrawer = () => {
   
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
   const totalPrice = items.reduce((sum, item) => sum + (parseFloat(item.price.amount) * item.quantity), 0);
+  
+  // Free shipping threshold
+  const freeShippingThreshold = 50;
+  const progressPercentage = Math.min(100, Math.round((totalPrice / freeShippingThreshold) * 100));
+  const remainingForFreeShipping = Math.max(0, freeShippingThreshold - totalPrice);
 
   const handleCheckout = async () => {
     try {
@@ -47,6 +52,25 @@ export const CartDrawer = () => {
             {totalItems === 0 ? "Your cart is empty" : `${totalItems} item${totalItems !== 1 ? 's' : ''} in your cart`}
           </SheetDescription>
         </SheetHeader>
+
+        {/* Free Shipping Progress Bar */}
+        {items.length > 0 && (
+          <div className="p-3 bg-muted/50 rounded-lg space-y-2 flex-shrink-0">
+            <p className="text-sm font-medium">
+              {progressPercentage >= 100 ? (
+                <span className="text-primary font-bold">🎁 Free shipping unlocked!</span>
+              ) : (
+                <span>Add ${remainingForFreeShipping.toFixed(2)} more for free shipping</span>
+              )}
+            </p>
+            <div className="h-2 bg-background rounded-full overflow-hidden">
+              <div 
+                className="h-full bg-primary transition-all duration-400 ease-out"
+                style={{ width: `${progressPercentage}%` }}
+              />
+            </div>
+          </div>
+        )}
         
         <div className="flex flex-col flex-1 pt-6 min-h-0">
           {items.length === 0 ? (

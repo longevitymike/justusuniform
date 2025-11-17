@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { getProductByHandle } from "@/lib/shopify";
 import { useCartStore } from "@/stores/cartStore";
 import { toast } from "sonner";
-import { Loader2, ShoppingCart, Truck, RefreshCw, Shield, ExternalLink, Star, Ruler } from "lucide-react";
+import { Loader2, ShoppingCart, Truck, RefreshCw, Shield, ExternalLink, Star, Ruler, Check } from "lucide-react";
+import confetti from "canvas-confetti";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import {
   Carousel,
@@ -28,7 +29,24 @@ const ProductDetail = () => {
   const [loading, setLoading] = useState(true);
   const [selectedColor, setSelectedColor] = useState<string>("");
   const [selectedSize, setSelectedSize] = useState<string>("");
+  const [showStickyATC, setShowStickyATC] = useState(false);
   const addItem = useCartStore(state => state.addItem);
+
+  // Sticky ATC intersection observer
+  useEffect(() => {
+    const atcButton = document.getElementById('main-atc-button');
+    if (!atcButton) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowStickyATC(!entry.isIntersecting);
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(atcButton);
+    return () => observer.disconnect();
+  }, [product]);
 
   useEffect(() => {
     const loadProduct = async () => {
@@ -72,6 +90,14 @@ const ProductDetail = () => {
       price: selectedVariant.price,
       quantity: 1,
       selectedOptions: selectedVariant.selectedOptions
+    });
+    
+    // Confetti celebration
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+      colors: ['#FF9E1B', '#59CBE8', '#4A7729']
     });
     
     toast.success("Added to cart!", {
@@ -160,39 +186,80 @@ const ProductDetail = () => {
             <div className="space-y-3 lg:space-y-4">
               <h1 className="heading-lg">{product.title}</h1>
               
-              {/* Reviews Placeholder */}
+              {/* Reviews Social Proof */}
               <div className="flex items-center gap-2">
                 <div className="flex items-center gap-1">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star key={star} className="h-5 w-5 fill-primary text-primary" />
                   ))}
                 </div>
-                <span className="text-sm font-semibold">4.9/5</span>
-                <span className="text-sm text-muted-foreground">(215 reviews)</span>
+                <span className="text-sm font-semibold">4.8/5</span>
+                <span className="text-sm text-muted-foreground">(1,274 parent tests)</span>
               </div>
 
-              <p className="text-3xl lg:text-4xl font-bold text-primary">
-                ${parseFloat(product.priceRange.minVariantPrice.amount).toFixed(2)}
+              {/* Price Anchoring */}
+              <div className="flex items-center gap-3">
+                <p className="text-lg lg:text-xl text-muted-foreground line-through">
+                  $39.00
+                </p>
+                <p className="text-3xl lg:text-4xl font-bold text-primary">
+                  ${parseFloat(product.priceRange.minVariantPrice.amount).toFixed(2)}
+                </p>
+                <span className="bg-destructive text-destructive-foreground px-3 py-1 rounded-full text-sm font-bold">
+                  SAVE $10
+                </span>
+              </div>
+              
+              {/* Subhead */}
+              <p className="text-base lg:text-lg font-semibold text-foreground">
+                Stain-resistant, tag-free, 'fits-right' sizing
               </p>
             </div>
 
-            <p className="text-muted-foreground text-base lg:text-lg leading-relaxed">
-              {product.description}
-            </p>
+            {/* Benefit Bullets */}
+            <div className="grid grid-cols-2 gap-3 lg:gap-4">
+              <div className="flex items-center gap-2">
+                <Check className="h-5 w-5 text-primary flex-shrink-0" />
+                <span className="text-sm lg:text-base font-medium">Built to Move</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="h-5 w-5 text-primary flex-shrink-0" />
+                <span className="text-sm lg:text-base font-medium">Stain-resistant</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="h-5 w-5 text-primary flex-shrink-0" />
+                <span className="text-sm lg:text-base font-medium">Tag-free waistband</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="h-5 w-5 text-primary flex-shrink-0" />
+                <span className="text-sm lg:text-base font-medium">'Fits-Right' size chart</span>
+              </div>
+            </div>
 
-            {/* Shipping & Returns Info */}
-            <div className="bg-secondary/20 rounded-lg p-4 space-y-2 border border-border">
-              <div className="flex items-center gap-2 text-sm">
+            {/* Guarantee Box - Risk Reversal */}
+            <div className="bg-primary/10 border-2 border-primary rounded-lg p-4 space-y-2">
+              <div className="flex items-start gap-3">
+                <Shield className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-bold text-base lg:text-lg text-foreground">
+                    Free 30-day exchanges. Made to outlast recess.
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    If recess wins, you don't pay.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Shipping Info */}
+            <div className="flex items-center gap-4 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
                 <Truck className="h-4 w-4 text-primary" />
-                <span className="font-semibold">Free shipping over $30</span>
+                <span>Free shipping over $30</span>
               </div>
-              <div className="flex items-center gap-2 text-sm">
+              <div className="flex items-center gap-2">
                 <RefreshCw className="h-4 w-4 text-primary" />
-                <span className="font-semibold">60-day easy returns</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <Shield className="h-4 w-4 text-primary" />
-                <span className="font-semibold">Perfect fit guarantee</span>
+                <span>60-day returns</span>
               </div>
             </div>
 
@@ -260,6 +327,7 @@ const ProductDetail = () => {
             ) : (
               <>
                 <Button
+                  id="main-atc-button"
                   size="lg"
                   className="w-full h-14 lg:h-16 text-base lg:text-lg bg-primary text-primary-foreground font-bold border-4 border-foreground uppercase tracking-wider transition-all duration-200 hover:translate-x-1 hover:translate-y-1 shadow-[4px_4px_0px_0px_hsl(var(--foreground))] hover:shadow-[0px_0px_0px_0px_hsl(var(--foreground))] tap-target"
                   onClick={handleAddToCart}
@@ -360,6 +428,34 @@ const ProductDetail = () => {
           </div>
         </div>
       </div>
+
+      {/* Sticky Mobile Add to Cart */}
+      {showStickyATC && PRIMARY_CTA !== 'amazon' && (
+        <div className="fixed bottom-0 left-0 right-0 z-50 bg-background border-t border-border shadow-[0_-6px_24px_rgba(0,0,0,0.08)] md:hidden">
+          <div className="container-spacing py-3">
+            <Button
+              size="lg"
+              className="w-full h-12 text-base bg-primary text-primary-foreground font-bold border-4 border-foreground uppercase tracking-wider transition-all duration-200 hover:translate-x-1 hover:translate-y-1 shadow-[4px_4px_0px_0px_hsl(var(--foreground))] hover:shadow-[0px_0px_0px_0px_hsl(var(--foreground))]"
+              onClick={handleAddToCart}
+              disabled={!selectedVariant}
+            >
+              <ShoppingCart className="mr-2 h-4 w-4" />
+              Add to Cart - ${selectedVariant ? parseFloat(selectedVariant.price.amount).toFixed(2) : '0.00'}
+            </Button>
+          </div>
+        </div>
+      )}
+      
+      <footer className="container-spacing pt-16 lg:pt-24 pb-8 lg:pb-12 border-t">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+          <p>&copy; 2024 Just Us Uniform. All rights reserved.</p>
+          <div className="flex gap-6">
+            <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
+            <Link to="/faq" className="hover:text-foreground transition-colors">FAQ</Link>
+            <Link to="/size-guide" className="hover:text-foreground transition-colors">Size Guide</Link>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
