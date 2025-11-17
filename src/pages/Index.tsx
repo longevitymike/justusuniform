@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { ProductCard } from "@/components/ProductCard";
 import { EmailSignup } from "@/components/EmailSignup";
+import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 import { ShopifyProduct, getProducts } from "@/lib/shopify";
 import { Loader2, Package } from "lucide-react";
 import logo from "@/assets/logo.png";
@@ -130,6 +131,9 @@ const Index = () => {
           )}
         </div>
       </section>
+
+      {/* Testimonials */}
+      <TestimonialsCarousel />
 
       {/* Email Signup */}
       <EmailSignup />
