@@ -6,6 +6,7 @@ import { ScrollingBanner } from "./ScrollingBanner";
 export const Header = () => {
   return (
     <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+      <ScrollingBanner />
       <div className="container mx-auto container-spacing py-3 lg:py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity tap-target" aria-label="Go to homepage">
           <img src={logo} alt="Just Us Uniform" className="h-10 w-10 lg:h-12 lg:w-12 rounded-full" />
@@ -30,7 +31,6 @@ export const Header = () => {
           </Link>
           <CartDrawer />
         </nav>
-        </div>
       </div>
     </header>
   );
