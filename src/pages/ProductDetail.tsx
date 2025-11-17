@@ -16,7 +16,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Badge } from "@/components/ui/badge";
-import productKidsStanding from "@/assets/product-kids-standing.jpg";
+import heroKidsUniforms from "@/assets/hero-kids-uniforms.png";
 import productGirlJumping from "@/assets/product-girl-jumping.jpg";
 import productKidsGrass from "@/assets/product-kids-grass.jpg";
 
@@ -165,8 +165,8 @@ const ProductDetail = () => {
                 <CarouselItem>
                   <div className="aspect-square bg-secondary/5 rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_hsl(var(--foreground)/0.08)]">
                     <img
-                      src={productKidsStanding}
-                      alt="Just Us Uniform Pants - Kids Standing"
+                      src={heroKidsUniforms}
+                      alt="Just Us Uniform Pants - Kids in School Uniforms"
                       className="w-full h-full object-cover"
                     />
                   </div>
