@@ -45,7 +45,7 @@ const Index = () => {
               Just Us Uniform
             </h1>
             <p className="body-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Fit, comfort, and designed by kids for kids
+              Fun and stylish uniform pants where comfort meets confidence
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 lg:pt-6">
@@ -74,28 +74,29 @@ const Index = () => {
       <section className="section-padding bg-gradient-to-b from-card/30 to-background">
         <div className="container mx-auto container-spacing">
           <div className="max-w-4xl mx-auto text-center space-y-6 lg:space-y-8 mb-12 lg:mb-16">
-            <h2 className="heading-md">Designed by Kids, for Kids</h2>
+            <h2 className="heading-md">Where Comfort Meets Confidence</h2>
             <p className="body-lg text-muted-foreground leading-relaxed">
-              We understand what matters most: <span className="text-primary font-semibold">fit, comfort, and freedom to move</span>. 
-              Every pair is thoughtfully designed with input from the kids who actually wear them every day.
+              At Just Us, we believe every child deserves to <span className="text-primary font-semibold">sparkle in comfort and style</span>. 
+              Our playful yet sleek pants are crafted with high-quality materials, ensuring durability and all-day comfort. 
+              Designed for kids who want to stand out and feel confident, Just Us makes every pair an expression of fun and individuality.
             </p>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
             <div className="premium-card text-center space-y-4 p-6 lg:p-8 group">
-              <div className="text-5xl lg:text-6xl transition-transform duration-300 group-hover:scale-110">👖</div>
-              <h3 className="font-bold text-lg lg:text-xl">Perfect Fit</h3>
-              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">Sizes that actually fit growing bodies</p>
+              <div className="text-5xl lg:text-6xl transition-transform duration-300 group-hover:scale-110">✨</div>
+              <h3 className="font-bold text-lg lg:text-xl">Stylish & Trendy</h3>
+              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">Playful designs that let kids express their unique personality and stand out</p>
             </div>
             <div className="premium-card text-center space-y-4 p-6 lg:p-8 group">
-              <div className="text-5xl lg:text-6xl transition-transform duration-300 group-hover:scale-110">☁️</div>
-              <h3 className="font-bold text-lg lg:text-xl">All-Day Comfort</h3>
-              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">Soft fabrics that move with you</p>
+              <div className="text-5xl lg:text-6xl transition-transform duration-300 group-hover:scale-110">💪</div>
+              <h3 className="font-bold text-lg lg:text-xl">Built to Last</h3>
+              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">Durable, high-quality materials ready for every adventure and playtime</p>
             </div>
             <div className="premium-card text-center space-y-4 p-6 lg:p-8 group sm:col-span-2 lg:col-span-1">
-              <div className="text-5xl lg:text-6xl transition-transform duration-300 group-hover:scale-110">🎨</div>
-              <h3 className="font-bold text-lg lg:text-xl">Kid-Approved</h3>
-              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">Designed with real kid feedback</p>
+              <div className="text-5xl lg:text-6xl transition-transform duration-300 group-hover:scale-110">🎯</div>
+              <h3 className="font-bold text-lg lg:text-xl">Confidence Boost</h3>
+              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">Empowering kids to feel special and confident in their everyday wear</p>
             </div>
           </div>
         </div>
@@ -135,7 +136,7 @@ const Index = () => {
             <div className="col-span-2 md:col-span-1 space-y-4">
               <img src={logo} alt="Just Us Uniform" className="h-12 w-12 lg:h-14 lg:w-14 rounded-full" />
               <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">
-                Uniforms designed by kids, for kids. Perfect fit, all-day comfort.
+                Dressing the future with confidence and joy. Because when kids feel good, they do great.
               </p>
             </div>
             

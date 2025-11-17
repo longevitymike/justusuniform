@@ -221,19 +221,19 @@ const ProductDetail = () => {
                 <ul className="space-y-2 lg:space-y-3 text-sm lg:text-base text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span>Perfect fit designed by real kids</span>
+                    <span>Trendy designs that let kids express their style</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span>All-day comfort with stretchy waistband</span>
+                    <span>All-day comfort perfect for every adventure</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span>Durable fabric that holds up to playground action</span>
+                    <span>Durable, high-quality materials built to last</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span>Available in classic uniform colors</span>
+                    <span>Confidence-boosting fit that makes kids feel special</span>
                   </li>
                 </ul>
               </div>
