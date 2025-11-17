@@ -8,35 +8,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Brand Colors - Just Us Uniform */
+    --brand-orange: 28 100% 56%; /* #FF9E1B - Pantone 1375C */
+    --brand-green: 95 47% 30%; /* #4A7729 - Deep olive */
+    --brand-navy: 215 42% 20%; /* #1E3A5F - Navy pants */
+    --brand-accent: 192 76% 63%; /* #59CBE8 - Pantone 305C */
+    
+    /* Theme Variables */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: var(--brand-navy);
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: var(--brand-navy);
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: var(--brand-navy);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: var(--brand-orange);
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: var(--brand-green);
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 28 100% 95%;
+    --muted-foreground: 95 20% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: var(--brand-accent);
+    --accent-foreground: var(--brand-navy);
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 28 30% 88%;
+    --input: 28 30% 88%;
+    --ring: var(--brand-orange);
 
-    --radius: 0.5rem;
+    --radius: 14px;
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -55,31 +65,43 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  /* Theme A: Kiddish Retro */
+  [data-theme="retro"] {
+    --background: 45 100% 98%;
+    --foreground: var(--brand-navy);
+    --primary: var(--brand-orange);
+    --card: 0 0% 100%;
+    --border: 28 40% 85%;
+    --radius: 20px;
+  }
+  
+  /* Theme B: Clean Modern Teen */
+  [data-theme="modern"] {
+    --background: 0 0% 98%;
+    --foreground: var(--brand-navy);
+    --primary: var(--brand-navy);
+    --card: 0 0% 100%;
+    --border: 220 13% 88%;
+    --radius: 8px;
+  }
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
+    --primary: var(--brand-orange);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--brand-green);
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
+    --accent: var(--brand-accent);
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
