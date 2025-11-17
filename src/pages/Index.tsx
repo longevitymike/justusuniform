@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { ProductCard } from "@/components/ProductCard";
+import { EmailSignup } from "@/components/EmailSignup";
 import { ShopifyProduct, getProducts } from "@/lib/shopify";
 import { Loader2, Package } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
+import heroImage from "@/assets/hero-kids-playing.jpg";
 
 const Index = () => {
   const [products, setProducts] = useState<ShopifyProduct[]>([]);
@@ -30,34 +31,41 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <div className="inline-block animate-bounce">
-              <img src={logo} alt="Just Us Uniform" className="h-32 w-32 mx-auto rounded-full shadow-xl" />
-            </div>
-            
-            <h1 className="text-5xl md:text-6xl font-black text-foreground leading-tight">
-              Uniforms Made by Kids,<br />
-              <span className="text-primary">for Kids</span>
-            </h1>
-            
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              The perfect fit and all-day comfort in every pair. Because we know what kids really need.
-            </p>
-            
-            <div className="flex flex-wrap gap-4 justify-center pt-4">
-              <Button size="lg" className="text-lg px-8 py-6">
-                Shop Now
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6">
-                Size Guide
-              </Button>
-            </div>
-            
-            <div className="inline-block bg-accent text-accent-foreground px-6 py-2 rounded-full font-bold text-sm shadow-md rotate-2 transform hover:rotate-0 transition-transform">
-              🎉 Coming Soon! Sign up for launch deals
-            </div>
+      <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/60" />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <div className="inline-block bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-bold mb-6 animate-bounce">
+            Coming Soon! 🎉
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            Just Us Uniform
+          </h1>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Fit, comfort, and designed by kids for kids
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/product/just-us-uniform-pants"
+              className="inline-flex items-center justify-center h-14 px-8 rounded-full bg-primary text-primary-foreground font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              Shop Now
+            </a>
+            <a 
+              href={import.meta.env.VITE_AMAZON_STORE_URL || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center h-14 px-8 rounded-full bg-secondary text-secondary-foreground font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              Buy on Amazon
+            </a>
           </div>
         </div>
       </section>
@@ -116,6 +124,9 @@ const Index = () => {
           )}
         </div>
       </section>
+
+      {/* Email Signup */}
+      <EmailSignup />
 
       {/* Footer */}
       <footer className="border-t bg-card/50 py-12 mt-20">
