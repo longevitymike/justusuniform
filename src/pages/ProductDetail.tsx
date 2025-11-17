@@ -16,6 +16,12 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Badge } from "@/components/ui/badge";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import heroKidsUniforms from "@/assets/hero-kids-uniforms.png";
 import productGirlJumping from "@/assets/product-girl-jumping.jpg";
 import productKidsGrass from "@/assets/product-kids-grass.jpg";
@@ -223,6 +229,28 @@ const ProductDetail = () => {
                   SAVE $10
                 </span>
               </div>
+
+              {/* Estimated Delivery Date - Research-backed conversion booster */}
+              <div className="flex items-center gap-2 text-sm text-foreground/80">
+                <Truck className="h-4 w-4 text-primary" />
+                <span className="font-medium">
+                  Arrives {new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', { weekday: 'short' })}–{new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
+                </span>
+              </div>
+
+              {/* Shipping & Returns Expandable - Total cost clarity */}
+              <Accordion type="single" collapsible className="border rounded-lg">
+                <AccordionItem value="shipping" className="border-0">
+                  <AccordionTrigger className="px-4 py-3 text-sm font-medium hover:no-underline">
+                    Shipping & Returns
+                  </AccordionTrigger>
+                  <AccordionContent className="px-4 pb-4 text-sm text-muted-foreground space-y-2">
+                    <p><strong>Shipping:</strong> Free on orders over $30. Otherwise $4.99 flat rate.</p>
+                    <p><strong>Returns:</strong> Free 60-day returns and exchanges. No questions asked.</p>
+                    <p><strong>Guarantee:</strong> If recess wins, you don't pay. Knee-blowout protection included.</p>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
               
               {/* Subhead */}
               <p className="text-base lg:text-lg font-semibold text-foreground">
@@ -264,18 +292,6 @@ const ProductDetail = () => {
                 </div>
               </div>
             </div>
-            
-            {/* Shipping Info */}
-            <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <Truck className="h-4 w-4 text-primary" />
-                <span>Free shipping over $30</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <RefreshCw className="h-4 w-4 text-primary" />
-                <span>60-day returns</span>
-              </div>
-            </div>
 
             {/* Options */}
             <div className="space-y-5 lg:space-y-6 pt-4 border-t">
@@ -301,23 +317,57 @@ const ProductDetail = () => {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <label className="text-sm lg:text-base font-semibold block">Size</label>
-                    <Link to="/size-guide" className="text-sm text-primary hover:underline flex items-center gap-1">
-                      <Ruler className="h-4 w-4" />
-                      Size Guide
-                    </Link>
+                    <div className="flex items-center gap-3">
+                      <span className="text-xs text-primary font-medium">True to size</span>
+                      <Link to="/size-guide" className="text-sm text-primary hover:underline flex items-center gap-1">
+                        <Ruler className="h-4 w-4" />
+                        Size Guide
+                      </Link>
+                    </div>
                   </div>
-                  <Select value={selectedSize} onValueChange={setSelectedSize}>
-                    <SelectTrigger className="h-12 lg:h-14 tap-target text-base">
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {sizeOption.values.map((size: string) => (
-                        <SelectItem key={size} value={size} className="text-base tap-target">
-                          Size {size}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                  {/* Size Button Grid - Research shows buttons outperform dropdowns for apparel */}
+                  <div className="grid grid-cols-5 gap-2">
+                    {sizeOption.values.map((size: string) => {
+                      const isSelected = selectedSize === size;
+                      const isAvailable = product.variants.edges.some((v: any) => 
+                        v.node.selectedOptions.some((opt: any) => opt.name === "Size" && opt.value === size) &&
+                        v.node.selectedOptions.some((opt: any) => opt.name === "Color" && opt.value === selectedColor) &&
+                        v.node.availableForSale
+                      );
+                      
+                      return (
+                        <button
+                          key={size}
+                          type="button"
+                          onClick={() => setSelectedSize(size)}
+                          disabled={!isAvailable}
+                          className={`
+                            relative h-12 rounded-md border-2 font-semibold text-sm transition-all tap-target
+                            ${isSelected 
+                              ? 'border-primary bg-primary text-primary-foreground shadow-md' 
+                              : isAvailable
+                                ? 'border-input bg-background hover:border-primary/50 hover:bg-primary/5'
+                                : 'border-input bg-muted text-muted-foreground opacity-50 cursor-not-allowed'
+                            }
+                          `}
+                        >
+                          {size}
+                          {!isAvailable && (
+                            <div className="absolute inset-0 flex items-center justify-center">
+                              <div className="w-full h-0.5 bg-muted-foreground/40 rotate-[-30deg]" />
+                            </div>
+                          )}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  {/* Stock State Messaging */}
+                  {selectedVariant?.availableForSale && (
+                    <p className="text-xs text-primary font-medium flex items-center gap-1">
+                      <Check className="h-3 w-3" />
+                      In stock — ships today
+                    </p>
+                  )}
                 </div>
               )}
             </div>
