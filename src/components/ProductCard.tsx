@@ -39,13 +39,29 @@ export const ProductCard = ({ product }: ProductCardProps) => {
       className="group block premium-card overflow-hidden tap-target"
       aria-label={`View ${product.node.title}`}
     >
-      <div className="aspect-[4/3] bg-secondary/5 overflow-hidden">
+      <div className="aspect-[4/3] bg-secondary/5 overflow-hidden relative">
         {imageUrl ? (
-          <img
-            src={imageUrl}
-            alt={product.node.title}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-          />
+          <>
+            <img
+              src={imageUrl}
+              alt={product.node.title}
+              className="w-full h-full object-cover group-hover:opacity-0 transition-opacity duration-300"
+            />
+            <video
+              className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              muted
+              loop
+              playsInline
+              onMouseEnter={(e) => e.currentTarget.play()}
+              onMouseLeave={(e) => {
+                e.currentTarget.pause();
+                e.currentTarget.currentTime = 0;
+              }}
+              poster={imageUrl}
+            >
+              <source src={imageUrl} type="video/mp4" />
+            </video>
+          </>
         ) : (
           <div className="w-full h-full flex items-center justify-center text-muted-foreground">
             No image

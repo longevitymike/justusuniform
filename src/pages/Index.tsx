@@ -28,6 +28,24 @@ const Index = () => {
     loadProducts();
   }, []);
 
+  // Lazy load reveal animation
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    
+    return () => observer.disconnect();
+  }, [products]);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
