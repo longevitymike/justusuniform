@@ -23,6 +23,7 @@ All colors MUST be HSL.
     
     /* Brand Colors - Just Us Uniform */
     --brand-orange: 28 100% 56%; /* #FF9E1B - Pantone 1375C */
+    --brand-orange-dark: 215 42% 20%; /* Dark stroke for stars */
     --brand-green: 95 47% 30%; /* #4A7729 - Deep olive */
     --brand-navy: 215 42% 20%; /* #1E3A5F - Navy pants */
     --brand-accent: 192 76% 63%; /* #59CBE8 - Pantone 305C */
