@@ -48,6 +48,20 @@ const ProductDetail = () => {
     return () => observer.disconnect();
   }, [product]);
 
+  // Review carousel auto-scroll
+  useEffect(() => {
+    let currentIndex = 0;
+    const track = document.getElementById('reviewTrack');
+    if (!track) return;
+
+    const interval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % 4; // 4 reviews
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, [product]);
+
   useEffect(() => {
     const loadProduct = async () => {
       if (!handle) return;
@@ -354,31 +368,33 @@ const ProductDetail = () => {
               </>
             )}
 
-            {/* Customer Reviews Highlight */}
+            {/* Customer Reviews Carousel */}
             <div className="border-t pt-6 lg:pt-8">
               <h3 className="font-bold text-lg lg:text-xl mb-4">What Parents Are Saying</h3>
-              <div className="space-y-4">
-                <div className="bg-secondary/10 rounded-lg p-4 border border-border">
-                  <div className="flex items-center gap-1 mb-2">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star key={star} className="h-4 w-4 fill-primary text-primary" />
-                    ))}
-                  </div>
-                  <p className="text-sm text-muted-foreground italic">
-                    "My son loves these! Finally found pants that fit properly and last through active play."
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-2">- Sarah M.</p>
-                </div>
-                <div className="bg-secondary/10 rounded-lg p-4 border border-border">
-                  <div className="flex items-center gap-1 mb-2">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star key={star} className="h-4 w-4 fill-primary text-primary" />
-                    ))}
-                  </div>
-                  <p className="text-sm text-muted-foreground italic">
-                    "Great quality and my daughter actually wants to wear them to school!"
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-2">- Jennifer K.</p>
+              <div className="overflow-hidden">
+                <div 
+                  id="reviewTrack" 
+                  className="flex gap-4 transition-transform duration-500 ease-in-out"
+                  style={{ willChange: 'transform' }}
+                >
+                  {[
+                    { text: "My son loves these! Finally found pants that fit properly and last through active play.", author: "Sarah M." },
+                    { text: "Great quality and my daughter actually wants to wear them to school!", author: "Jennifer K." },
+                    { text: "These survived a full week of recess. I'm ordering 3 more pairs!", author: "Michael T." },
+                    { text: "The stain-resistant fabric is a game changer. No more grass stains!", author: "Lisa R." },
+                  ].map((review, idx) => (
+                    <div key={idx} className="min-w-full bg-secondary/10 rounded-lg p-4 border border-border flex-shrink-0">
+                      <div className="flex items-center gap-1 mb-2">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <Star key={star} className="h-4 w-4 fill-primary text-primary" />
+                        ))}
+                      </div>
+                      <p className="text-sm text-muted-foreground italic">
+                        "{review.text}"
+                      </p>
+                      <p className="text-xs text-muted-foreground mt-2">- {review.author}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
