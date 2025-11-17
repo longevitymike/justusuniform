@@ -7,6 +7,16 @@ import { useCartStore } from "@/stores/cartStore";
 import { toast } from "sonner";
 import { Loader2, ShoppingCart, Truck, RefreshCw, Shield, ExternalLink } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import productKidsStanding from "@/assets/product-kids-standing.jpg";
+import productGirlJumping from "@/assets/product-girl-jumping.jpg";
+import productKidsGrass from "@/assets/product-kids-grass.jpg";
 
 const PRIMARY_CTA = import.meta.env.VITE_PRIMARY_CTA || 'shopify';
 const AMAZON_URL = import.meta.env.VITE_AMAZON_STORE_URL || '';
@@ -100,21 +110,41 @@ const ProductDetail = () => {
       
       <div className="container mx-auto container-spacing section-padding">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 max-w-7xl mx-auto">
-          {/* Image Gallery */}
-          <div className="space-y-4 lg:space-y-6 lg:sticky lg:top-24">
-            <div className="aspect-square bg-secondary/5 rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_hsl(var(--foreground)/0.08)]">
-              {product.images.edges[0]?.node ? (
-                <img
-                  src={product.images.edges[0].node.url}
-                  alt={product.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                  No image
-                </div>
-              )}
-            </div>
+          {/* Image Gallery Carousel */}
+          <div className="lg:sticky lg:top-24">
+            <Carousel className="w-full">
+              <CarouselContent>
+                <CarouselItem>
+                  <div className="aspect-square bg-secondary/5 rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_hsl(var(--foreground)/0.08)]">
+                    <img
+                      src={productKidsStanding}
+                      alt="Just Us Uniform Pants - Kids Standing"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="aspect-square bg-secondary/5 rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_hsl(var(--foreground)/0.08)]">
+                    <img
+                      src={productGirlJumping}
+                      alt="Just Us Uniform Pants - Girl Jumping"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="aspect-square bg-secondary/5 rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_hsl(var(--foreground)/0.08)]">
+                    <img
+                      src={productKidsGrass}
+                      alt="Just Us Uniform Pants - Kids on Grass"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious className="left-4" />
+              <CarouselNext className="right-4" />
+            </Carousel>
           </div>
 
           {/* Product Info */}
@@ -188,7 +218,7 @@ const ProductDetail = () => {
             ) : (
               <Button
                 size="lg"
-                className="w-full h-14 lg:h-16 text-base lg:text-lg font-bold tap-target shadow-[0_8px_32px_-8px_hsl(var(--primary)/0.4)] hover:shadow-[0_12px_48px_-8px_hsl(var(--primary)/0.5)] hover:-translate-y-1 transition-all duration-300"
+                className="w-full h-14 lg:h-16 text-base lg:text-lg bg-primary text-primary-foreground font-bold border-4 border-foreground uppercase tracking-wider transition-all duration-200 hover:translate-x-1 hover:translate-y-1 shadow-[4px_4px_0px_0px_hsl(var(--foreground))] hover:shadow-[0px_0px_0px_0px_hsl(var(--foreground))] tap-target"
                 onClick={handleAddToCart}
                 disabled={!selectedVariant}
                 aria-label={`Add ${product.title} to cart`}
