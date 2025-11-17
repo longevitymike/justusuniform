@@ -8,6 +8,10 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Fonts */
+    --font-headline: 'Fredoka', sans-serif;
+    --font-body: 'Work Sans', sans-serif;
+    
     /* Brand Colors - Just Us Uniform */
     --brand-orange: 28 100% 56%; /* #FF9E1B - Pantone 1375C */
     --brand-green: 95 47% 30%; /* #4A7729 - Deep olive */
@@ -164,19 +168,19 @@ All colors MUST be HSL.
   
   /* Editorial Typography */
   .heading-xl {
-    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight;
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight font-headline;
   }
   
   .heading-lg {
-    @apply text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight;
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight font-headline;
   }
   
   .heading-md {
-    @apply text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight;
+    @apply text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight font-headline;
   }
   
   .body-lg {
-    @apply text-lg sm:text-xl lg:text-2xl;
+    @apply text-lg sm:text-xl lg:text-2xl font-body;
   }
   
   /* Premium Card */
