@@ -45,13 +45,13 @@ export const EmailSignup = ({ variant = 'pill' }: EmailSignupProps) => {
   const getButtonClasses = () => {
     switch (variant) {
       case 'pill':
-        return 'cta-pill bg-primary text-primary-foreground hover:bg-primary/90';
+        return "h-14 bg-primary text-primary-foreground font-bold border-4 border-foreground uppercase tracking-wider transition-all duration-200 hover:translate-x-1 hover:translate-y-1 shadow-[4px_4px_0px_0px_hsl(var(--foreground))] hover:shadow-[0px_0px_0px_0px_hsl(var(--foreground))]";
       case 'soft-card':
-        return 'cta-soft-card text-primary';
+        return "h-14 bg-secondary text-secondary-foreground font-bold border-4 border-foreground uppercase tracking-wider transition-all duration-200 hover:translate-x-1 hover:translate-y-1 shadow-[4px_4px_0px_0px_hsl(var(--foreground))] hover:shadow-[0px_0px_0px_0px_hsl(var(--foreground))]";
       case 'ghost-outline':
-        return 'cta-ghost-outline text-foreground hover:text-primary';
+        return "h-14 bg-background text-foreground font-bold border-4 border-foreground uppercase tracking-wider transition-all duration-200 hover:translate-x-1 hover:translate-y-1 shadow-[4px_4px_0px_0px_hsl(var(--foreground))] hover:shadow-[0px_0px_0px_0px_hsl(var(--foreground))]";
       default:
-        return 'cta-pill bg-primary text-primary-foreground hover:bg-primary/90';
+        return "h-14 bg-primary text-primary-foreground font-bold border-4 border-foreground uppercase tracking-wider transition-all duration-200 hover:translate-x-1 hover:translate-y-1 shadow-[4px_4px_0px_0px_hsl(var(--foreground))] hover:shadow-[0px_0px_0px_0px_hsl(var(--foreground))]";
     }
   };
 

@@ -5,6 +5,7 @@ import { EmailSignup } from "@/components/EmailSignup";
 import { ShopifyProduct, getProducts } from "@/lib/shopify";
 import { Loader2, Package } from "lucide-react";
 import logo from "@/assets/logo.png";
+import logoHero from "@/assets/logo-hero.png";
 import heroImage from "@/assets/hero-grass-kids.jpg";
 
 const Index = () => {
@@ -41,9 +42,13 @@ const Index = () => {
         
         <div className="container mx-auto container-spacing relative z-10 text-center">
           <div className="max-w-5xl mx-auto space-y-6 lg:space-y-8">
-            <h1 className="heading-xl mb-6 lg:mb-8">
-              Just Us Uniform
-            </h1>
+            <div className="flex justify-center mb-6 lg:mb-8">
+              <img 
+                src={logoHero} 
+                alt="Just Us Uniform" 
+                className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-contain"
+              />
+            </div>
             <p className="body-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Fun and stylish uniform pants where comfort meets confidence
             </p>
