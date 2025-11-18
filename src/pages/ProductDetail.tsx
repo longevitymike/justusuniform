@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Header } from "@/components/Header";
+import { SchoolFinder } from "@/components/SchoolFinder";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 import { UGCCarousel } from "@/components/UGCCarousel";
 import { Button } from "@/components/ui/button";
 import { getProductByHandle } from "@/lib/shopify";
 import { useCartStore } from "@/stores/cartStore";
 import { toast } from "sonner";
-import { Loader2, ShoppingCart, Truck, RefreshCw, Shield, ExternalLink, Star, Ruler, Check, AlertCircle, Package, TrendingUp } from "lucide-react";
+import { Loader2, ShoppingCart, Truck, RefreshCw, Shield, ExternalLink, Star, Ruler, Check, AlertCircle, Package, TrendingUp, CheckCircle2 } from "lucide-react";
 import confetti from "canvas-confetti";
 import ugcParent1 from "@/assets/ugc-parent-1.png";
 import ugcParent2 from "@/assets/ugc-parent-2.png";
@@ -42,7 +43,16 @@ const ProductDetail = () => {
   const [selectedSize, setSelectedSize] = useState<string>("");
   const [showStickyATC, setShowStickyATC] = useState(false);
   const [timeLeft, setTimeLeft] = useState({ hours: 2, minutes: 14 });
+  const [selectedSchool, setSelectedSchool] = useState<any>(null);
   const addItem = useCartStore(state => state.addItem);
+
+  // Load selected school from localStorage
+  useEffect(() => {
+    const schoolData = localStorage.getItem("selectedSchool");
+    if (schoolData) {
+      setSelectedSchool(JSON.parse(schoolData));
+    }
+  }, []);
 
   // Countdown timer for EDD
   useEffect(() => {
@@ -230,6 +240,16 @@ const ProductDetail = () => {
           <div className="space-y-6 lg:space-y-8 lg:sticky lg:top-24 lg:self-start">
             <div className="space-y-3 lg:space-y-4">
               <h1 className="heading-lg">{product.title}</h1>
+              
+              {/* School Compliance Badge */}
+              {selectedSchool && (
+                <div className="inline-flex items-center gap-2 bg-accent/20 border-2 border-accent rounded-lg px-4 py-2">
+                  <CheckCircle2 className="w-5 h-5 text-accent" />
+                  <span className="font-semibold text-sm">
+                    Compliant for {selectedSchool.name} in {selectedSchool.allowedColors.join(", ")}
+                  </span>
+                </div>
+              )}
               
               {/* Reviews Social Proof with Photo Reviews */}
               <div className="flex items-center gap-3 flex-wrap">

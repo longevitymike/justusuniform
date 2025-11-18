@@ -5,6 +5,7 @@ import { EmailSignup } from "@/components/EmailSignup";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 import { UGCCarousel } from "@/components/UGCCarousel";
 import { LogoLoop } from "@/components/LogoLoop";
+import { SchoolFinder } from "@/components/SchoolFinder";
 import { ShopifyProduct, getProducts } from "@/lib/shopify";
 import { Loader2, Package } from "lucide-react";
 import logo from "@/assets/logo.png";
@@ -113,6 +114,13 @@ const Index = () => {
             gap={80}
             hoverSpeed={10}
           />
+        </div>
+      </section>
+
+      {/* School Finder Section */}
+      <section className="py-12 lg:py-16 reveal">
+        <div className="container mx-auto container-spacing">
+          <SchoolFinder />
         </div>
       </section>
 
