@@ -6,6 +6,7 @@ import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 import { UGCCarousel } from "@/components/UGCCarousel";
 import { LogoLoop } from "@/components/LogoLoop";
 import { SchoolFinder } from "@/components/SchoolFinder";
+import { SnowEffect } from "@/components/SnowEffect";
 import { ShopifyProduct, getProducts } from "@/lib/shopify";
 import { Loader2, Package } from "lucide-react";
 import logo from "@/assets/logo.png";
@@ -51,6 +52,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SnowEffect />
       <Header />
       
       {/* Hero Section */}
