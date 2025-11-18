@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Header } from "@/components/Header";
+import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
+import { UGCCarousel } from "@/components/UGCCarousel";
 import { Button } from "@/components/ui/button";
 import { getProductByHandle } from "@/lib/shopify";
 import { useCartStore } from "@/stores/cartStore";
@@ -606,6 +608,12 @@ const ProductDetail = () => {
         </div>
       )}
       
+      {/* Testimonials */}
+      <TestimonialsCarousel />
+
+      {/* UGC Parent Photos */}
+      <UGCCarousel />
+
       <footer className="container-spacing pt-16 lg:pt-24 pb-8 lg:pb-12 border-t">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>&copy; 2024 Just Us Uniform. All rights reserved.</p>
