@@ -11,6 +11,7 @@ import { ShopifyProduct, getProducts } from "@/lib/shopify";
 import { Loader2, Package } from "lucide-react";
 import logo from "@/assets/logo.png";
 import logoHero from "@/assets/logo-hero.png";
+import santaHat from "@/assets/santa-hat.webp";
 import heroImage from "@/assets/hero-kids-grass-legs.jpg";
 
 const Index = () => {
@@ -67,11 +68,18 @@ const Index = () => {
         <div className="container mx-auto container-spacing relative z-10 text-center">
           <div className="max-w-5xl mx-auto space-y-6 lg:space-y-8">
             <div className="flex justify-center mb-6 lg:mb-8">
-              <img 
-                src={logoHero} 
-                alt="Just Us Uniform" 
-                className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-contain"
-              />
+              <div className="relative">
+                <img 
+                  src={logoHero} 
+                  alt="Just Us Uniform" 
+                  className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-contain"
+                />
+                <img 
+                  src={santaHat} 
+                  alt="Santa Hat" 
+                  className="absolute -top-4 -right-4 sm:-top-8 sm:-right-8 lg:-top-12 lg:-right-12 w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 object-contain rotate-[-15deg] animate-pulse"
+                />
+              </div>
             </div>
             <p className="body-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Recess-proof school pants. Stain-resistant, tag-free, 'fits-right' sizing. Free 30-day exchanges.
