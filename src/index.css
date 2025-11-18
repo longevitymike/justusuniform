@@ -98,6 +98,23 @@ All colors MUST be HSL.
     --border: 220 13% 88%;
     --radius: 8px;
   }
+  
+  /* Theme C: Christmas Special */
+  [data-theme="christmas"] {
+    --background: 0 0% 99%; /* Snowy white */
+    --foreground: 355 75% 25%; /* Deep Christmas red */
+    --primary: 355 85% 55%; /* Bright Christmas red */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 145 60% 35%; /* Christmas tree green */
+    --secondary-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --border: 355 40% 90%; /* Soft red border */
+    --accent: 45 95% 55%; /* Gold accent */
+    --accent-foreground: 355 75% 25%;
+    --muted: 355 30% 95%;
+    --muted-foreground: 355 20% 40%;
+    --radius: 16px;
+  }
 
   .dark {
     --background: 222.2 84% 4.9%;
