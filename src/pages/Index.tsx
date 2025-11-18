@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { ProductCard } from "@/components/ProductCard";
 import { EmailSignup } from "@/components/EmailSignup";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
+import { UGCCarousel } from "@/components/UGCCarousel";
 import { LogoLoop } from "@/components/LogoLoop";
 import { ShopifyProduct, getProducts } from "@/lib/shopify";
 import { Loader2, Package } from "lucide-react";
@@ -181,6 +182,9 @@ const Index = () => {
 
       {/* Testimonials */}
       <TestimonialsCarousel />
+
+      {/* UGC Parent Photos */}
+      <UGCCarousel />
 
       {/* Email Signup */}
       <EmailSignup />
