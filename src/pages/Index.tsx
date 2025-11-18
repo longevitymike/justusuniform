@@ -104,12 +104,12 @@ const Index = () => {
         <div className="container mx-auto container-spacing">
           <LogoLoop
             logos={[
-              "Dress Code Approved ✓",
-              "1,274+ Parent Tests",
-              "37 Schools",
-              "Recess-Proof",
-              "Stain-Resistant",
-              "Tag-Free Comfort",
+              { text: "Dress Code Approved ✓", icon: "BadgeCheck" },
+              { text: "1,274+ Parent Tests", icon: "Users" },
+              { text: "37 Schools", icon: "GraduationCap" },
+              { text: "Recess-Proof", icon: "ShieldCheck" },
+              { text: "Stain-Resistant", icon: "Sparkles" },
+              { text: "Tag-Free Comfort", icon: "Heart" },
             ]}
             speed={50}
             logoHeight={32}
