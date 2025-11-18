@@ -9,6 +9,9 @@ import { useCartStore } from "@/stores/cartStore";
 import { toast } from "sonner";
 import { Loader2, ShoppingCart, Truck, RefreshCw, Shield, ExternalLink, Star, Ruler, Check, AlertCircle, Package, TrendingUp } from "lucide-react";
 import confetti from "canvas-confetti";
+import ugcParent1 from "@/assets/ugc-parent-1.png";
+import ugcParent2 from "@/assets/ugc-parent-2.png";
+import ugcParent3 from "@/assets/ugc-parent-3.png";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import {
   Carousel,
@@ -607,6 +610,223 @@ const ProductDetail = () => {
           </div>
         </div>
       )}
+
+      {/* Comparison Table */}
+      <section className="section-padding bg-muted/30">
+        <div className="container mx-auto container-spacing">
+          <h2 className="heading-md text-center mb-8 lg:mb-12">Just Us vs Standard Uniform Pants</h2>
+          
+          <div className="max-w-4xl mx-auto premium-card overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm lg:text-base">
+                <thead>
+                  <tr className="border-b-2 border-border">
+                    <th className="text-left p-4 lg:p-6 font-bold text-base lg:text-lg">Feature</th>
+                    <th className="text-center p-4 lg:p-6 font-bold text-primary text-base lg:text-lg">Just Us Uniform</th>
+                    <th className="text-center p-4 lg:p-6 font-bold text-muted-foreground text-base lg:text-lg">Standard Pants</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-border">
+                    <td className="p-4 lg:p-6 font-medium">Tag-free waistband</td>
+                    <td className="p-4 lg:p-6 text-center">
+                      <Check className="h-5 w-5 lg:h-6 lg:w-6 text-primary mx-auto" />
+                    </td>
+                    <td className="p-4 lg:p-6 text-center text-muted-foreground">—</td>
+                  </tr>
+                  <tr className="border-b border-border bg-muted/20">
+                    <td className="p-4 lg:p-6 font-medium">Stain-resistant</td>
+                    <td className="p-4 lg:p-6 text-center">
+                      <Check className="h-5 w-5 lg:h-6 lg:w-6 text-primary mx-auto" />
+                    </td>
+                    <td className="p-4 lg:p-6 text-center text-muted-foreground">—</td>
+                  </tr>
+                  <tr className="border-b border-border">
+                    <td className="p-4 lg:p-6 font-medium">Reinforced knees</td>
+                    <td className="p-4 lg:p-6 text-center">
+                      <Check className="h-5 w-5 lg:h-6 lg:w-6 text-primary mx-auto" />
+                    </td>
+                    <td className="p-4 lg:p-6 text-center text-muted-foreground">—</td>
+                  </tr>
+                  <tr className="border-b border-border bg-muted/20">
+                    <td className="p-4 lg:p-6 font-medium">Fits-Right sizing</td>
+                    <td className="p-4 lg:p-6 text-center">
+                      <Check className="h-5 w-5 lg:h-6 lg:w-6 text-primary mx-auto" />
+                    </td>
+                    <td className="p-4 lg:p-6 text-center text-muted-foreground">—</td>
+                  </tr>
+                  <tr className="border-b border-border">
+                    <td className="p-4 lg:p-6 font-medium">30-day exchanges</td>
+                    <td className="p-4 lg:p-6 text-center">
+                      <Check className="h-5 w-5 lg:h-6 lg:w-6 text-primary mx-auto" />
+                    </td>
+                    <td className="p-4 lg:p-6 text-center text-muted-foreground">Limited</td>
+                  </tr>
+                  <tr className="bg-muted/20">
+                    <td className="p-4 lg:p-6 font-medium">Designed by kids</td>
+                    <td className="p-4 lg:p-6 text-center">
+                      <Check className="h-5 w-5 lg:h-6 lg:w-6 text-primary mx-auto" />
+                    </td>
+                    <td className="p-4 lg:p-6 text-center text-muted-foreground">—</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* UGC Strip with Fit Data */}
+      <section className="section-padding bg-background">
+        <div className="container mx-auto container-spacing">
+          <div className="text-center mb-8 lg:mb-10">
+            <h2 className="heading-md mb-4">How Parents Say They Fit</h2>
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-primary/10 rounded-full">
+              <TrendingUp className="h-5 w-5 text-primary" />
+              <span className="font-bold text-base lg:text-lg">82% say: <span className="text-primary">True to size</span></span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 lg:gap-4 max-w-6xl mx-auto">
+            <div className="aspect-[4/5] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <img src={ugcParent1} alt="Parent testimonial photo 1" className="w-full h-full object-cover" />
+            </div>
+            <div className="aspect-[4/5] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <img src={ugcParent2} alt="Parent testimonial photo 2" className="w-full h-full object-cover" />
+            </div>
+            <div className="aspect-[4/5] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <img src={ugcParent3} alt="Parent testimonial photo 3" className="w-full h-full object-cover" />
+            </div>
+            <div className="aspect-[4/5] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <img src={ugcParent1} alt="Parent testimonial photo 4" className="w-full h-full object-cover" />
+            </div>
+            <div className="aspect-[4/5] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <img src={ugcParent2} alt="Parent testimonial photo 5" className="w-full h-full object-cover" />
+            </div>
+            <div className="aspect-[4/5] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <img src={ugcParent3} alt="Parent testimonial photo 6" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="section-padding bg-muted/30">
+        <div className="container mx-auto container-spacing">
+          <h2 className="heading-md text-center mb-8 lg:mb-12">Common Questions</h2>
+          
+          <Accordion type="single" collapsible className="max-w-3xl mx-auto space-y-4">
+            <AccordionItem value="returns" className="premium-card border-0">
+              <AccordionTrigger className="px-6 py-4 hover:no-underline">
+                <span className="text-left font-semibold text-base lg:text-lg">What is your return policy?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4 text-sm lg:text-base text-muted-foreground">
+                We offer free 60-day returns and free exchanges. If your child outgrows them or you need a different size, we make it easy. Just reach out to our team and we will take care of everything.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="compliance" className="premium-card border-0">
+              <AccordionTrigger className="px-6 py-4 hover:no-underline">
+                <span className="text-left font-semibold text-base lg:text-lg">Are these school dress-code compliant?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4 text-sm lg:text-base text-muted-foreground">
+                Yes! Just Us Uniform pants are designed to meet standard school dress codes. They feature no logos, come in approved colors (Navy, Khaki, Black), have proper belt loops, and are made from wrinkle-resistant, appropriate fabric. Accepted at 37+ schools.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="measuring" className="premium-card border-0">
+              <AccordionTrigger className="px-6 py-4 hover:no-underline">
+                <span className="text-left font-semibold text-base lg:text-lg">How do I measure my child for the right size?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4 text-sm lg:text-base text-muted-foreground">
+                We recommend ordering your child&apos;s typical size—82% of parents say our pants fit true to size. For the most accurate fit, measure their waist at the belly button and check our size guide. If between sizes, we suggest sizing up for growing room.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="care" className="premium-card border-0">
+              <AccordionTrigger className="px-6 py-4 hover:no-underline">
+                <span className="text-left font-semibold text-base lg:text-lg">How do I care for these pants?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4 text-sm lg:text-base text-muted-foreground">
+                Super easy! Machine wash cold with like colors, tumble dry low. The fabric is wrinkle-resistant and stain-resistant, so they look great wash after wash. No special treatment needed—just toss them in with the regular laundry.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="durability" className="premium-card border-0">
+              <AccordionTrigger className="px-6 py-4 hover:no-underline">
+                <span className="text-left font-semibold text-base lg:text-lg">Will they survive recess and rough play?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4 text-sm lg:text-base text-muted-foreground">
+                Absolutely! Our pants feature reinforced knees and are built to handle slides, grass stains, and all-day active play. We stand behind our Play-Hard Guarantee—if they don&apos;t last, we&apos;ll make it right.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
+      {/* Guarantee Row */}
+      <section className="section-padding bg-primary text-primary-foreground">
+        <div className="container mx-auto container-spacing">
+          <div className="max-w-5xl mx-auto text-center space-y-6">
+            <h2 className="text-2xl lg:text-4xl font-bold">Our Play-Hard Guarantee</h2>
+            <div className="flex flex-wrap justify-center items-center gap-4 lg:gap-8 text-sm lg:text-base">
+              <div className="flex items-center gap-2">
+                <Shield className="h-5 w-5 lg:h-6 lg:w-6" />
+                <span className="font-semibold">Play-Hard Guarantee</span>
+              </div>
+              <span className="hidden sm:inline text-primary-foreground/60">•</span>
+              <div className="flex items-center gap-2">
+                <RefreshCw className="h-5 w-5 lg:h-6 lg:w-6" />
+                <span className="font-semibold">30-day free exchanges</span>
+              </div>
+              <span className="hidden sm:inline text-primary-foreground/60">•</span>
+              <div className="flex items-center gap-2">
+                <Package className="h-5 w-5 lg:h-6 lg:w-6" />
+                <span className="font-semibold">Free returns</span>
+              </div>
+            </div>
+            <p className="text-base lg:text-lg text-primary-foreground/90 max-w-2xl mx-auto">
+              If they don&apos;t survive recess, we&apos;ll make it right. Made to outlast every adventure.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Final Static CTA */}
+      <section className="section-padding bg-background">
+        <div className="container mx-auto container-spacing">
+          <div className="max-w-2xl mx-auto text-center space-y-6">
+            <h2 className="text-2xl lg:text-3xl font-bold">Ready to Try Recess-Proof Pants?</h2>
+            <p className="text-base lg:text-lg text-muted-foreground">
+              Join 1,274+ parents who chose comfort, durability, and confidence for their kids.
+            </p>
+            {PRIMARY_CTA === 'amazon' ? (
+              <Button 
+                size="lg" 
+                className="h-14 lg:h-16 px-8 lg:px-12 text-base lg:text-lg font-bold shadow-[0_8px_32px_-8px_hsl(var(--primary)/0.4)] hover:shadow-[0_12px_48px_-8px_hsl(var(--primary)/0.5)] hover:-translate-y-1 transition-all duration-300"
+                onClick={() => window.open(AMAZON_URL, '_blank')}
+                aria-label="Buy on Amazon"
+              >
+                <ExternalLink className="mr-2 h-5 w-5" />
+                Buy on Amazon — ${selectedVariant ? parseFloat(selectedVariant.price.amount).toFixed(2) : '34.99'}
+              </Button>
+            ) : (
+              <Button
+                size="lg"
+                className="h-14 lg:h-16 px-8 lg:px-12 text-base lg:text-lg bg-primary text-primary-foreground font-bold border-4 border-foreground uppercase tracking-wider transition-all duration-200 hover:translate-x-1 hover:translate-y-1 shadow-[4px_4px_0px_0px_hsl(var(--foreground))] hover:shadow-[0px_0px_0px_0px_hsl(var(--foreground))]"
+                onClick={handleAddToCart}
+                disabled={!selectedVariant}
+              >
+                <ShoppingCart className="mr-2 h-5 w-5" />
+                Add to Cart — ${selectedVariant ? parseFloat(selectedVariant.price.amount).toFixed(2) : '34.99'}
+              </Button>
+            )}
+            <p className="text-xs lg:text-sm text-muted-foreground">
+              Free shipping on orders $30+ • 30-day exchanges
+            </p>
+          </div>
+        </div>
+      </section>
       
       {/* Testimonials */}
       <TestimonialsCarousel />
