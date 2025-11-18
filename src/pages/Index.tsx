@@ -6,12 +6,10 @@ import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 import { UGCCarousel } from "@/components/UGCCarousel";
 import { LogoLoop } from "@/components/LogoLoop";
 import { SchoolFinder } from "@/components/SchoolFinder";
-import { SnowEffect } from "@/components/SnowEffect";
 import { ShopifyProduct, getProducts } from "@/lib/shopify";
-import { Loader2, Package } from "lucide-react";
+import { Loader2, Package, Flame } from "lucide-react";
 import logo from "@/assets/logo.png";
 import logoHero from "@/assets/logo-hero.png";
-import santaHat from "@/assets/santa-hat.webp";
 import heroImage from "@/assets/hero-kids-grass-legs.jpg";
 
 const Index = () => {
@@ -53,7 +51,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SnowEffect />
       <Header />
       
       {/* Hero Section */}
@@ -68,27 +65,20 @@ const Index = () => {
         <div className="container mx-auto container-spacing relative z-10 text-center">
           <div className="max-w-5xl mx-auto space-y-6 lg:space-y-8">
             <div className="flex justify-center mb-6 lg:mb-8">
-              <div className="relative">
-                <img 
-                  src={logoHero} 
-                  alt="Just Us Uniform" 
-                  className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-contain"
-                />
-                <img 
-                  src={santaHat} 
-                  alt="Santa Hat" 
-                  className="absolute -top-4 -right-4 sm:-top-8 sm:-right-8 lg:-top-12 lg:-right-12 w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 object-contain rotate-[-15deg] animate-pulse"
-                />
-              </div>
+              <img 
+                src={logoHero} 
+                alt="Just Us Uniform" 
+                className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-contain"
+              />
             </div>
             <p className="body-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Recess-proof school pants. Stain-resistant, tag-free, 'fits-right' sizing. Free 30-day exchanges.
+              Just us is a vibrant kids uniform pant company dedicated to creating stylish, comfortable and durable apparel. Combining playful design with sleek craftsmanship, we empower kids to be themselves while enjoying their everyday adventures. Our mission is to dress the future with confidence and joy because when kids feel good, they do great.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center pt-4 lg:pt-6">
               <a 
                 href="/product/just-us-uniform-pants"
-                className="group relative inline-flex items-center justify-center tap-target h-14 sm:h-16 px-8 lg:px-12 bg-primary text-primary-foreground font-bold text-base sm:text-lg border-4 border-foreground uppercase tracking-wider transition-all duration-200 hover:translate-x-1 hover:translate-y-1 shadow-[4px_4px_0px_0px_hsl(var(--foreground))] hover:shadow-[0px_0px_0px_0px_hsl(var(--foreground))]"
+                className="group relative inline-flex items-center justify-center tap-target h-14 sm:h-16 px-8 lg:px-12 bg-primary text-primary-foreground font-bold text-base sm:text-lg rounded-full uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 aria-label="Shop now"
               >
                 Shop Now
@@ -97,7 +87,7 @@ const Index = () => {
                 href={import.meta.env.VITE_AMAZON_STORE_URL || "#"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center justify-center tap-target h-14 sm:h-16 px-8 lg:px-12 bg-background text-foreground font-bold text-base sm:text-lg border-4 border-foreground uppercase tracking-wider transition-all duration-200 hover:translate-x-1 hover:translate-y-1 shadow-[4px_4px_0px_0px_hsl(var(--foreground))] hover:shadow-[0px_0px_0px_0px_hsl(var(--foreground))]"
+                className="group relative inline-flex items-center justify-center tap-target h-14 sm:h-16 px-8 lg:px-12 bg-secondary text-secondary-foreground font-bold text-base sm:text-lg rounded-full uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 aria-label="Buy on Amazon"
               >
                 Buy on Amazon
@@ -107,69 +97,32 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Logo Loop */}
-      <section className="section-padding border-y bg-card/20">
-        <div className="container mx-auto container-spacing">
-          <LogoLoop
-            logos={[
-              { text: "Dress Code Approved ✓", icon: "BadgeCheck" },
-              { text: "1,274+ Parent Tests", icon: "Users" },
-              { text: "37 Schools", icon: "GraduationCap" },
-              { text: "Recess-Proof", icon: "ShieldCheck" },
-              { text: "Stain-Resistant", icon: "Sparkles" },
-              { text: "Tag-Free Comfort", icon: "Heart" },
-            ]}
-            speed={50}
-            logoHeight={32}
-            gap={80}
-            hoverSpeed={10}
-          />
-        </div>
-      </section>
-
-      {/* School Finder Section */}
-      <section className="py-12 lg:py-16 reveal">
-        <div className="container mx-auto container-spacing">
-          <SchoolFinder />
-        </div>
-      </section>
 
       {/* Mission Section */}
       <section className="section-padding bg-gradient-to-b from-card/30 to-background">
         <div className="container mx-auto container-spacing">
-          <div className="max-w-4xl mx-auto text-center space-y-6 lg:space-y-8 mb-12 lg:mb-16">
+          <div className="max-w-4xl mx-auto text-center space-y-6 lg:space-y-8">
             <h2 className="heading-md">Where Comfort Meets Confidence</h2>
             <p className="body-lg text-muted-foreground leading-relaxed">
               At Just Us, we believe every child deserves to <span className="text-primary font-semibold">sparkle in comfort and style</span>. 
               Our playful yet sleek pants are crafted with high-quality materials, ensuring durability and all-day comfort. 
               From school to play, Just Us empowers kids to be themselves and feel special every day.
             </p>
-            <p className="text-base lg:text-lg font-semibold text-foreground">
-              Free 30‑day exchanges. Made to outlast recess.
-            </p>
           </div>
-          
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-6xl mx-auto">
-            <div className="premium-card text-center space-y-4 p-6 lg:p-8 group">
-              <div className="text-5xl lg:text-6xl transition-transform duration-300 group-hover:scale-110">🏃</div>
-              <h3 className="font-bold text-lg lg:text-xl">Built to Move</h3>
-              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">Flexible fabric that moves with your child through every activity</p>
+        </div>
+      </section>
+
+      {/* Stretch Material Feature */}
+      <section className="section-padding border-y bg-card/20">
+        <div className="container mx-auto container-spacing">
+          <div className="flex flex-col items-center justify-center gap-4 text-center max-w-2xl mx-auto">
+            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+              <Flame className="w-8 h-8 text-primary" />
             </div>
-            <div className="premium-card text-center space-y-4 p-6 lg:p-8 group">
-              <div className="text-5xl lg:text-6xl transition-transform duration-300 group-hover:scale-110">✨</div>
-              <h3 className="font-bold text-lg lg:text-xl">Stain‑resistant</h3>
-              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">Advanced fabric protection keeps them looking fresh all day</p>
-            </div>
-            <div className="premium-card text-center space-y-4 p-6 lg:p-8 group">
-              <div className="text-5xl lg:text-6xl transition-transform duration-300 group-hover:scale-110">🏷️</div>
-              <h3 className="font-bold text-lg lg:text-xl">Tag‑free waistband</h3>
-              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">No scratchy tags, just all-day comfort and ease</p>
-            </div>
-            <div className="premium-card text-center space-y-4 p-6 lg:p-8 group">
-              <div className="text-5xl lg:text-6xl transition-transform duration-300 group-hover:scale-110">📏</div>
-              <h3 className="font-bold text-lg lg:text-xl">'Fits‑Right' size chart</h3>
-              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">Accurate sizing designed specifically for active kids</p>
-            </div>
+            <h3 className="font-bold text-xl lg:text-2xl">Premium Stretch Material</h3>
+            <p className="text-base lg:text-lg text-muted-foreground leading-relaxed">
+              Engineered with advanced stretch fabric technology for maximum comfort and freedom of movement
+            </p>
           </div>
         </div>
       </section>
