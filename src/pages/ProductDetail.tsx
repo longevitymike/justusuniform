@@ -602,53 +602,27 @@ const ProductDetail = () => {
           <Accordion type="single" collapsible className="max-w-3xl mx-auto space-y-4">
             <AccordionItem value="returns" className="premium-card border-0">
               <AccordionTrigger className="px-6 py-4 hover:no-underline">
-                <span className="text-left font-semibold text-base lg:text-lg">Want to Return Your Item?</span>
+                <span className="text-left font-semibold text-base lg:text-lg">What's your return policy?</span>
               </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4 text-sm lg:text-base text-muted-foreground space-y-4">
+              <AccordionContent className="px-6 pb-4 text-sm lg:text-base text-muted-foreground space-y-3">
                 <p>
-                  Currently, we do not accept returns for reasons such as change of mind or incorrect sizing. Refunds are only processed for defective or damaged products.
-                </p>
-                <p className="font-semibold">
-                  📌 Return requests must be submitted within 7 days of receiving the product.
+                  We stand behind the quality of our pants! We only process returns for defective or damaged items—not for sizing or change of mind. 
+                  We recommend checking our size guide before ordering to ensure the perfect fit.
                 </p>
                 
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-foreground">How to Start Your Return</h4>
-                  <p>Send an email to <a href="mailto:verish.globalmall@deep-dive.kr" className="text-primary hover:underline">verish.globalmall@deep-dive.kr</a> with:</p>
+                  <p className="font-semibold text-foreground">Got a defective item? Here's what to do:</p>
+                  <p>Email us at <a href="mailto:verish.globalmall@deep-dive.kr" className="text-primary hover:underline font-medium">verish.globalmall@deep-dive.kr</a> within 7 days with:</p>
                   <ul className="list-disc pl-5 space-y-1">
-                    <li>Order number</li>
-                    <li>Clear photos/videos showing the defect (front & back)</li>
-                    <li>Brief description of the issue</li>
+                    <li>Your order number</li>
+                    <li>Photos showing the defect</li>
+                    <li>Quick description of what's wrong</li>
                   </ul>
+                  <p className="text-sm">Items must be unworn and unwashed with tags attached. Minor variations in color or small imperfections don't qualify as defects.</p>
                 </div>
 
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-foreground">Return Guidelines</h4>
-                  <ul className="list-disc pl-5 space-y-1">
-                    <li>Items must be unworn, unwashed, and in their original condition with all tags attached</li>
-                    <li>Slight imperfections such as small stains or minor color variations do not qualify as defects</li>
-                    <li>Shipping Fees for Returns: For international orders, round-trip shipping costs may be deducted from the refund if applicable</li>
-                  </ul>
-                </div>
-
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-foreground">Refund Processing</h4>
-                  <p>
-                    Refunds will be issued only after approval and may take up to 10-30 business days depending on the payment method. 
-                    If the original payment method is unavailable, refunds will be processed via bank transfer.
-                  </p>
-                </div>
-
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-foreground">Exchanges</h4>
-                  <p>
-                    We do not offer exchanges for any orders, including cases of incorrect sizing. 
-                    If you need a different size, please place a new order.
-                  </p>
-                </div>
-
-                <p className="text-xs italic">
-                  Our team will review your request and confirm whether a refund is approved. Further steps will be informed via email.
+                <p className="text-sm">
+                  Approved refunds take 10-30 business days to process. Need a different size? We don't offer exchanges, but you can place a new order anytime!
                 </p>
               </AccordionContent>
             </AccordionItem>
