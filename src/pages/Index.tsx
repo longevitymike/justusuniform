@@ -188,7 +188,7 @@ const Index = () => {
               <ul className="space-y-3 text-sm lg:text-base text-muted-foreground">
                 <li><a href="/legal/privacy" className="hover:text-primary transition-colors tap-target inline-block">Privacy Policy</a></li>
                 <li><a href="/legal/terms" className="hover:text-primary transition-colors tap-target inline-block">Terms of Service</a></li>
-                <li><a href="/legal/returns" className="hover:text-primary transition-colors tap-target inline-block">Returns</a></li>
+                <li><a href="/returns" className="hover:text-primary transition-colors tap-target inline-block">Returns</a></li>
               </ul>
             </div>
           </div>
