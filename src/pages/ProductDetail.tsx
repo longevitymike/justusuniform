@@ -516,6 +516,27 @@ const ProductDetail = () => {
                     <td className="p-4 lg:p-6 text-center text-muted-foreground">—</td>
                   </tr>
                   <tr className="border-b border-border bg-muted/20">
+                    <td className="p-4 lg:p-6 font-medium">Sleek Design</td>
+                    <td className="p-4 lg:p-6 text-center">
+                      <Check className="h-5 w-5 lg:h-6 lg:w-6 text-primary mx-auto" />
+                    </td>
+                    <td className="p-4 lg:p-6 text-center text-muted-foreground">—</td>
+                  </tr>
+                  <tr className="border-b border-border">
+                    <td className="p-4 lg:p-6 font-medium">All-day Comfort</td>
+                    <td className="p-4 lg:p-6 text-center">
+                      <Check className="h-5 w-5 lg:h-6 lg:w-6 text-primary mx-auto" />
+                    </td>
+                    <td className="p-4 lg:p-6 text-center text-muted-foreground">—</td>
+                  </tr>
+                  <tr className="border-b border-border bg-muted/20">
+                    <td className="p-4 lg:p-6 font-medium">Premium Materials</td>
+                    <td className="p-4 lg:p-6 text-center">
+                      <Check className="h-5 w-5 lg:h-6 lg:w-6 text-primary mx-auto" />
+                    </td>
+                    <td className="p-4 lg:p-6 text-center text-muted-foreground">—</td>
+                  </tr>
+                  <tr className="border-b border-border">
                     <td className="p-4 lg:p-6 font-medium">Designed by kids</td>
                     <td className="p-4 lg:p-6 text-center">
                       <Check className="h-5 w-5 lg:h-6 lg:w-6 text-primary mx-auto" />
