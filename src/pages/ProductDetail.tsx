@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { getProductByHandle } from "@/lib/shopify";
 import { useCartStore } from "@/stores/cartStore";
 import { toast } from "sonner";
-import { Loader2, ShoppingCart, Truck, RefreshCw, Shield, ExternalLink, Star, Ruler, Check, AlertCircle, Package, TrendingUp, CheckCircle2 } from "lucide-react";
+import { Loader2, ShoppingCart, Truck, RefreshCw, Shield, ExternalLink, Star, Ruler, Check, AlertCircle, Package, TrendingUp, CheckCircle2, Sparkles, Heart, Settings } from "lucide-react";
 import confetti from "canvas-confetti";
 import ugcParent1 from "@/assets/ugc-parent-1.png";
 import ugcParent2 from "@/assets/ugc-parent-2.png";
@@ -268,15 +268,15 @@ const ProductDetail = () => {
               <h3 className="font-bold text-lg lg:text-xl text-brand-green">Premium Stretch Materials</h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 lg:gap-4">
                 <div className="flex items-center gap-2">
-                  <Check className="h-5 w-5 text-primary flex-shrink-0" />
+                  <Sparkles className="h-5 w-5 text-primary flex-shrink-0" />
                   <span className="text-sm lg:text-base font-medium">Sleek Design</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Check className="h-5 w-5 text-primary flex-shrink-0" />
+                  <Heart className="h-5 w-5 text-primary flex-shrink-0" />
                   <span className="text-sm lg:text-base font-medium">Comfort Features</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Check className="h-5 w-5 text-primary flex-shrink-0" />
+                  <Settings className="h-5 w-5 text-primary flex-shrink-0" />
                   <span className="text-sm lg:text-base font-medium">Adjustable Waistband</span>
                 </div>
               </div>
