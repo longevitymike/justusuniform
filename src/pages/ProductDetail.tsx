@@ -526,27 +526,6 @@ const ProductDetail = () => {
                     <td className="p-4 lg:p-6 text-center text-muted-foreground">—</td>
                   </tr>
                   <tr className="border-b border-border">
-                    <td className="p-4 lg:p-6 font-medium">Reinforced knees</td>
-                    <td className="p-4 lg:p-6 text-center">
-                      <Check className="h-5 w-5 lg:h-6 lg:w-6 text-primary mx-auto" />
-                    </td>
-                    <td className="p-4 lg:p-6 text-center text-muted-foreground">—</td>
-                  </tr>
-                  <tr className="border-b border-border bg-muted/20">
-                    <td className="p-4 lg:p-6 font-medium">Fits-Right sizing</td>
-                    <td className="p-4 lg:p-6 text-center">
-                      <Check className="h-5 w-5 lg:h-6 lg:w-6 text-primary mx-auto" />
-                    </td>
-                    <td className="p-4 lg:p-6 text-center text-muted-foreground">—</td>
-                  </tr>
-                  <tr className="border-b border-border">
-                    <td className="p-4 lg:p-6 font-medium">30-day exchanges</td>
-                    <td className="p-4 lg:p-6 text-center">
-                      <Check className="h-5 w-5 lg:h-6 lg:w-6 text-primary mx-auto" />
-                    </td>
-                    <td className="p-4 lg:p-6 text-center text-muted-foreground">Limited</td>
-                  </tr>
-                  <tr className="bg-muted/20">
                     <td className="p-4 lg:p-6 font-medium">Designed by kids</td>
                     <td className="p-4 lg:p-6 text-center">
                       <Check className="h-5 w-5 lg:h-6 lg:w-6 text-primary mx-auto" />
@@ -659,7 +638,7 @@ const ProductDetail = () => {
                 <span className="text-left font-semibold text-base lg:text-lg">Will they survive recess and rough play?</span>
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4 text-sm lg:text-base text-muted-foreground">
-                Absolutely! Our pants feature reinforced knees and are built to handle slides, grass stains, and all-day active play. We stand behind our Play-Hard Guarantee—if they don&apos;t last, we&apos;ll make it right.
+                Absolutely! Our pants are built to handle slides, grass stains, and all-day active play. We stand behind our Play-Hard Guarantee—if they don&apos;t last, we&apos;ll make it right.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -678,13 +657,8 @@ const ProductDetail = () => {
               </div>
               <span className="hidden sm:inline text-primary-foreground/60">•</span>
               <div className="flex items-center gap-2">
-                <RefreshCw className="h-5 w-5 lg:h-6 lg:w-6" />
-                <span className="font-semibold">30-day free exchanges</span>
-              </div>
-              <span className="hidden sm:inline text-primary-foreground/60">•</span>
-              <div className="flex items-center gap-2">
                 <Package className="h-5 w-5 lg:h-6 lg:w-6" />
-                <span className="font-semibold">Free returns</span>
+                <span className="font-semibold">Free returns on defects</span>
               </div>
             </div>
             <p className="text-base lg:text-lg text-primary-foreground/90 max-w-2xl mx-auto">
