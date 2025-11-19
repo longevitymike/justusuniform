@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import ugcParent1 from "@/assets/ugc-parent-1.png";
+import ugcParent1 from "@/assets/ugc-parent-new-1.png";
 import ugcParent2 from "@/assets/ugc-parent-2.png";
 import ugcParent3 from "@/assets/ugc-parent-3.png";
 
