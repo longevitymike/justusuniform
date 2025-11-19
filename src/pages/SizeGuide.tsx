@@ -28,7 +28,7 @@ const SizeGuide = () => {
                 </TableHeader>
                 <TableBody>
                   <TableRow>
-                    <TableCell className="font-medium">5</TableCell>
+                    
                     <TableCell>20-21</TableCell>
                     <TableCell>22-23</TableCell>
                     <TableCell>15-16</TableCell>
