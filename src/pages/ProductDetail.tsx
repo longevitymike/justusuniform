@@ -260,18 +260,22 @@ const ProductDetail = () => {
             {/* Premium Stretch Materials */}
             <div className="space-y-3 lg:space-y-4">
               <h3 className="font-bold text-lg lg:text-xl text-brand-green">Premium Stretch Materials</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 lg:gap-4">
-                <div className="flex items-center gap-2">
-                  <Sparkles className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-sm lg:text-base font-medium">Sleek Design</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+                <div className="flex flex-col items-center text-center gap-2 p-4 rounded-lg bg-muted/30">
+                  <Sparkles className="h-8 w-8 text-primary flex-shrink-0" />
+                  <span className="text-sm lg:text-base font-semibold">Sleek Design</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Heart className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-sm lg:text-base font-medium">Comfort Features</span>
+                <div className="flex flex-col items-center text-center gap-2 p-4 rounded-lg bg-muted/30">
+                  <Heart className="h-8 w-8 text-primary flex-shrink-0" />
+                  <span className="text-sm lg:text-base font-semibold">All-Day Comfort</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Settings className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-sm lg:text-base font-medium">Adjustable Waistband</span>
+                <div className="flex flex-col items-center text-center gap-2 p-4 rounded-lg bg-muted/30">
+                  <Settings className="h-8 w-8 text-primary flex-shrink-0" />
+                  <span className="text-sm lg:text-base font-semibold">Adjustable Waistband</span>
+                </div>
+                <div className="flex flex-col items-center text-center gap-2 p-4 rounded-lg bg-muted/30">
+                  <Shield className="h-8 w-8 text-primary flex-shrink-0" />
+                  <span className="text-sm lg:text-base font-semibold">Durable Construction</span>
                 </div>
               </div>
             </div>
