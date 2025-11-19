@@ -129,22 +129,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Products Section */}
-      <section className="section-padding">
-        <div className="container mx-auto container-spacing">
-          <h2 className="heading-md text-center mb-12 lg:mb-16 text-brand-green">Our Uniforms</h2>
-          
-          {loading ? <div className="flex justify-center items-center py-20 lg:py-32">
-              <Loader2 className="h-12 w-12 lg:h-16 lg:w-16 animate-spin text-primary" />
-            </div> : products.length > 0 ? <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
-              {products.map(product => <ProductCard key={product.node.id} product={product} />)}
-            </div> : <div className="text-center py-20 lg:py-32 space-y-6">
-              <Package className="h-16 w-16 lg:h-20 lg:w-20 text-muted-foreground mx-auto" />
-              <p className="text-xl lg:text-2xl text-muted-foreground">No products found</p>
-            </div>}
-        </div>
-      </section>
-
       {/* Testimonials */}
       <TestimonialsCarousel />
 
