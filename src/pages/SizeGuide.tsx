@@ -55,48 +55,6 @@ const SizeGuide = () => {
                     <TableCell>18-19</TableCell>
                     <TableCell>6-7 years</TableCell>
                   </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">8</TableCell>
-                    <TableCell>24-25</TableCell>
-                    <TableCell>26-27</TableCell>
-                    <TableCell>19-20</TableCell>
-                    <TableCell>7-8 years</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">10</TableCell>
-                    <TableCell>25-26</TableCell>
-                    <TableCell>28-29</TableCell>
-                    <TableCell>21-22</TableCell>
-                    <TableCell>9-10 years</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">12</TableCell>
-                    <TableCell>26-27</TableCell>
-                    <TableCell>30-31</TableCell>
-                    <TableCell>23-24</TableCell>
-                    <TableCell>11-12 years</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">14</TableCell>
-                    <TableCell>27-28</TableCell>
-                    <TableCell>32-33</TableCell>
-                    <TableCell>25-26</TableCell>
-                    <TableCell>13-14 years</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">16</TableCell>
-                    <TableCell>28-29</TableCell>
-                    <TableCell>34-35</TableCell>
-                    <TableCell>27-28</TableCell>
-                    <TableCell>15-16 years</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">18</TableCell>
-                    <TableCell>29-30</TableCell>
-                    <TableCell>36-37</TableCell>
-                    <TableCell>29-30</TableCell>
-                    <TableCell>17+ years</TableCell>
-                  </TableRow>
                 </TableBody>
               </Table>
             </div>
