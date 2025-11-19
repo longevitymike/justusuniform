@@ -1,9 +1,7 @@
 import { Header } from "@/components/Header";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-
 const SizeGuide = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header />
       
       <div className="container mx-auto px-4 py-12">
@@ -30,28 +28,28 @@ const SizeGuide = () => {
                 </TableHeader>
                 <TableBody>
                   <TableRow>
-                    <TableCell className="font-medium">4</TableCell>
+                    <TableCell className="font-medium">5</TableCell>
                     <TableCell>20-21</TableCell>
                     <TableCell>22-23</TableCell>
                     <TableCell>15-16</TableCell>
                     <TableCell>3-4 years</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">5</TableCell>
+                    <TableCell className="font-medium">5/6</TableCell>
                     <TableCell>21-22</TableCell>
                     <TableCell>23-24</TableCell>
                     <TableCell>16-17</TableCell>
                     <TableCell>4-5 years</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">6</TableCell>
+                    <TableCell className="font-medium">6/7</TableCell>
                     <TableCell>22-23</TableCell>
                     <TableCell>24-25</TableCell>
                     <TableCell>17-18</TableCell>
                     <TableCell>5-6 years</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">7</TableCell>
+                    <TableCell className="font-medium">7/8</TableCell>
                     <TableCell>23-24</TableCell>
                     <TableCell>25-26</TableCell>
                     <TableCell>18-19</TableCell>
@@ -130,8 +128,6 @@ const SizeGuide = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default SizeGuide;
