@@ -594,33 +594,6 @@ const ProductDetail = () => {
           <h2 className="heading-md text-center mb-8 lg:mb-12">Common Questions</h2>
           
           <Accordion type="single" collapsible className="max-w-3xl mx-auto space-y-4">
-            <AccordionItem value="returns" className="premium-card border-0">
-              <AccordionTrigger className="px-6 py-4 hover:no-underline">
-                <span className="text-left font-semibold text-base lg:text-lg">What's your return policy?</span>
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4 text-sm lg:text-base text-muted-foreground space-y-3">
-                <p>
-                  We stand behind the quality of our pants! We only process returns for defective or damaged items—not for sizing or change of mind. 
-                  We recommend checking our size guide before ordering to ensure the perfect fit.
-                </p>
-                
-                <div className="space-y-2">
-                  <p className="font-semibold text-foreground">Got a defective item? Here's what to do:</p>
-                  <p>Email us at <a href="mailto:verish.globalmall@deep-dive.kr" className="text-primary hover:underline font-medium">verish.globalmall@deep-dive.kr</a> within 7 days with:</p>
-                  <ul className="list-disc pl-5 space-y-1">
-                    <li>Your order number</li>
-                    <li>Photos showing the defect</li>
-                    <li>Quick description of what's wrong</li>
-                  </ul>
-                  <p className="text-sm">Items must be unworn and unwashed with tags attached. Minor variations in color or small imperfections don't qualify as defects.</p>
-                </div>
-
-                <p className="text-sm">
-                  Approved refunds take 10-30 business days to process. Need a different size? We don't offer exchanges, but you can place a new order anytime!
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-
             <AccordionItem value="compliance" className="premium-card border-0">
               <AccordionTrigger className="px-6 py-4 hover:no-underline">
                 <span className="text-left font-semibold text-base lg:text-lg">Are these school dress-code compliant?</span>
