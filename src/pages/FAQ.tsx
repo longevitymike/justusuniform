@@ -28,17 +28,6 @@ const FAQ = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-2">
-                <AccordionTrigger className="text-left">
-                  What sizes are available?
-                </AccordionTrigger>
-                <AccordionContent>
-                  We offer sizes 4 through 18, covering ages 3-4 years through teens. Check our Size Guide 
-                  for detailed measurements to find the perfect fit. Our pants feature adjustable waistbands 
-                  to grow with your child!
-                </AccordionContent>
-              </AccordionItem>
-
               <AccordionItem value="item-3">
                 <AccordionTrigger className="text-left">
                   What colors do you offer?
@@ -57,27 +46,6 @@ const FAQ = () => {
                   Our pants are machine washable and wrinkle-resistant for easy care! Simply machine wash 
                   cold with like colors and tumble dry low. No need for ironing - they're designed for 
                   busy families and active kids.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-5">
-                <AccordionTrigger className="text-left">
-                  Do you offer free shipping?
-                </AccordionTrigger>
-                <AccordionContent>
-                  Yes! We offer free standard shipping on all orders. Your Just Us Uniform pants will 
-                  arrive ready for the first day of school.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-6">
-                <AccordionTrigger className="text-left">
-                  What is your return policy?
-                </AccordionTrigger>
-                <AccordionContent>
-                  We want you to love your Just Us Uniform pants! If you're not completely satisfied, 
-                  we accept returns within 30 days of purchase for a full refund. Items must be unworn 
-                  with tags attached. See our Returns page for complete details.
                 </AccordionContent>
               </AccordionItem>
 
