@@ -47,11 +47,16 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="relative min-h-[90vh] lg:min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{
-        backgroundImage: `url(${heroImage})`
-      }}>
-          <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background/60" />
-        </div>
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/hero-video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background/60" />
         
         <div className="container mx-auto container-spacing relative z-10 text-center">
           <div className="max-w-5xl mx-auto space-y-6 lg:space-y-8">
