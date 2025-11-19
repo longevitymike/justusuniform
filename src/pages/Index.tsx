@@ -92,6 +92,19 @@ const Index = () => {
             </p>
           </div>
 
+          {/* Premium Stretch Material */}
+          <div className="max-w-2xl mx-auto mt-12 lg:mt-16">
+            <div className="flex flex-col items-center justify-center gap-4 text-center">
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                <Flame className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="font-bold text-xl lg:text-2xl">Premium Stretch Material</h3>
+              <p className="text-base lg:text-lg text-muted-foreground leading-relaxed">
+                Engineered with advanced stretch fabric technology for maximum comfort and freedom of movement
+              </p>
+            </div>
+          </div>
+
           {/* Feature Icons */}
           <div className="max-w-5xl mx-auto mt-12 lg:mt-16">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
@@ -112,21 +125,6 @@ const Index = () => {
                 <span className="text-base lg:text-lg font-semibold">Durable Construction</span>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stretch Material Feature */}
-      <section className="section-padding border-y bg-card/20">
-        <div className="container mx-auto container-spacing">
-          <div className="flex flex-col items-center justify-center gap-4 text-center max-w-2xl mx-auto">
-            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-              <Flame className="w-8 h-8 text-primary" />
-            </div>
-            <h3 className="font-bold text-xl lg:text-2xl">Premium Stretch Material</h3>
-            <p className="text-base lg:text-lg text-muted-foreground leading-relaxed">
-              Engineered with advanced stretch fabric technology for maximum comfort and freedom of movement
-            </p>
           </div>
         </div>
       </section>
