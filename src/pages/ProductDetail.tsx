@@ -21,6 +21,9 @@ import heroKidsUniforms from "@/assets/hero-kids-uniforms.png";
 import productGirlJumping from "@/assets/product-girl-jumping.jpg";
 import productKidsGrass from "@/assets/product-kids-grass.jpg";
 import productNavyPants from "@/assets/product-navy-pants.png";
+import productPantsBack from "@/assets/product-pants-back.jpg";
+import productPantsFront from "@/assets/product-pants-front.jpg";
+import productPantsSide from "@/assets/product-pants-side.jpg";
 const PRIMARY_CTA = import.meta.env.VITE_PRIMARY_CTA || 'shopify';
 const AMAZON_URL = import.meta.env.VITE_AMAZON_STORE_URL || '';
 const ProductDetail = () => {
@@ -179,6 +182,21 @@ const ProductDetail = () => {
                 <CarouselItem>
                   <div className="aspect-square bg-secondary/5 rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_hsl(var(--foreground)/0.08)]">
                     <img src={productNavyPants} alt="Just Us Uniform Pants - Navy Pants" className="w-full h-full object-cover" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="aspect-square bg-secondary/5 rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_hsl(var(--foreground)/0.08)]">
+                    <img src={productPantsBack} alt="Just Us Uniform Pants - Back View" className="w-full h-full object-cover" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="aspect-square bg-secondary/5 rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_hsl(var(--foreground)/0.08)]">
+                    <img src={productPantsFront} alt="Just Us Uniform Pants - Front View" className="w-full h-full object-cover" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="aspect-square bg-secondary/5 rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_hsl(var(--foreground)/0.08)]">
+                    <img src={productPantsSide} alt="Just Us Uniform Pants - Side View" className="w-full h-full object-cover" />
                   </div>
                 </CarouselItem>
                 <CarouselItem>
