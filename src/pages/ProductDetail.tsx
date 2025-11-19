@@ -20,6 +20,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import heroKidsUniforms from "@/assets/hero-kids-uniforms.png";
 import productGirlJumping from "@/assets/product-girl-jumping.jpg";
 import productKidsGrass from "@/assets/product-kids-grass.jpg";
+import productNavyPants from "@/assets/product-navy-pants.png";
 const PRIMARY_CTA = import.meta.env.VITE_PRIMARY_CTA || 'shopify';
 const AMAZON_URL = import.meta.env.VITE_AMAZON_STORE_URL || '';
 const ProductDetail = () => {
@@ -169,15 +170,6 @@ const ProductDetail = () => {
       <Header />
       
       <div className="container mx-auto container-spacing section-padding">
-        {/* USP Banner with School-Approved Badge */}
-        <div className="mb-8 lg:mb-12 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <Badge className="bg-secondary text-secondary-foreground text-sm lg:text-base px-4 py-2 font-bold uppercase">
-            ✓ School-Approved
-          </Badge>
-          <Badge className="bg-primary text-primary-foreground text-sm lg:text-base px-4 py-2 font-bold uppercase">
-            ✨ Designed by Kids, for Kids
-          </Badge>
-        </div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 max-w-7xl mx-auto">
           {/* Image Gallery Carousel */}
@@ -186,7 +178,7 @@ const ProductDetail = () => {
               <CarouselContent>
                 <CarouselItem>
                   <div className="aspect-square bg-secondary/5 rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_hsl(var(--foreground)/0.08)]">
-                    <img src={heroKidsUniforms} alt="Just Us Uniform Pants - Kids in School Uniforms" className="w-full h-full object-cover" />
+                    <img src={productNavyPants} alt="Just Us Uniform Pants - Navy Pants" className="w-full h-full object-cover" />
                   </div>
                 </CarouselItem>
                 <CarouselItem>
@@ -197,6 +189,11 @@ const ProductDetail = () => {
                 <CarouselItem>
                   <div className="aspect-square bg-secondary/5 rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_hsl(var(--foreground)/0.08)]">
                     <img src={productKidsGrass} alt="Just Us Uniform Pants - Kids on Grass" className="w-full h-full object-cover" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="aspect-square bg-secondary/5 rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_hsl(var(--foreground)/0.08)]">
+                    <img src={heroKidsUniforms} alt="Just Us Uniform Pants - Kids in School Uniforms" className="w-full h-full object-cover" />
                   </div>
                 </CarouselItem>
               </CarouselContent>
@@ -248,34 +245,25 @@ const ProductDetail = () => {
               
             </div>
 
-            {/* Benefit Bullets */}
-            <div className="grid grid-cols-2 gap-3 lg:gap-4">
-              <div className="flex items-center gap-2">
-                <Check className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="text-sm lg:text-base font-medium">Built to Move</span>
-              </div>
-              
-              <div className="flex items-center gap-2">
-                <Check className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="text-sm lg:text-base font-medium">Tag-free waistband</span>
-              </div>
-              
-            </div>
-
-            {/* Guarantee Box - Risk Reversal */}
-            <div className="bg-primary/10 border-2 border-primary rounded-lg p-4 space-y-2">
-              <div className="flex items-start gap-3">
-                <Shield className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-bold text-base lg:text-lg text-foreground">
-                    Free 30-day exchanges. Made to outlast recess.
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    If recess wins, you don't pay.
-                  </p>
+            {/* Premium Stretch Materials */}
+            <div className="space-y-3 lg:space-y-4">
+              <h3 className="font-bold text-lg lg:text-xl text-brand-green">Premium Stretch Materials</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 lg:gap-4">
+                <div className="flex items-center gap-2">
+                  <Check className="h-5 w-5 text-primary flex-shrink-0" />
+                  <span className="text-sm lg:text-base font-medium">Sleek Design</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="h-5 w-5 text-primary flex-shrink-0" />
+                  <span className="text-sm lg:text-base font-medium">Comfort Features</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="h-5 w-5 text-primary flex-shrink-0" />
+                  <span className="text-sm lg:text-base font-medium">Adjustable Waistband</span>
                 </div>
               </div>
             </div>
+
 
             {/* Options */}
             <div className="space-y-5 lg:space-y-6 pt-4 border-t">
@@ -602,10 +590,54 @@ const ProductDetail = () => {
           <Accordion type="single" collapsible className="max-w-3xl mx-auto space-y-4">
             <AccordionItem value="returns" className="premium-card border-0">
               <AccordionTrigger className="px-6 py-4 hover:no-underline">
-                <span className="text-left font-semibold text-base lg:text-lg">What is your return policy?</span>
+                <span className="text-left font-semibold text-base lg:text-lg">Want to Return Your Item?</span>
               </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4 text-sm lg:text-base text-muted-foreground">
-                We offer free 60-day returns and free exchanges. If your child outgrows them or you need a different size, we make it easy. Just reach out to our team and we will take care of everything.
+              <AccordionContent className="px-6 pb-4 text-sm lg:text-base text-muted-foreground space-y-4">
+                <p>
+                  Currently, we do not accept returns for reasons such as change of mind or incorrect sizing. Refunds are only processed for defective or damaged products.
+                </p>
+                <p className="font-semibold">
+                  📌 Return requests must be submitted within 7 days of receiving the product.
+                </p>
+                
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-foreground">How to Start Your Return</h4>
+                  <p>Send an email to <a href="mailto:verish.globalmall@deep-dive.kr" className="text-primary hover:underline">verish.globalmall@deep-dive.kr</a> with:</p>
+                  <ul className="list-disc pl-5 space-y-1">
+                    <li>Order number</li>
+                    <li>Clear photos/videos showing the defect (front & back)</li>
+                    <li>Brief description of the issue</li>
+                  </ul>
+                </div>
+
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-foreground">Return Guidelines</h4>
+                  <ul className="list-disc pl-5 space-y-1">
+                    <li>Items must be unworn, unwashed, and in their original condition with all tags attached</li>
+                    <li>Slight imperfections such as small stains or minor color variations do not qualify as defects</li>
+                    <li>Shipping Fees for Returns: For international orders, round-trip shipping costs may be deducted from the refund if applicable</li>
+                  </ul>
+                </div>
+
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-foreground">Refund Processing</h4>
+                  <p>
+                    Refunds will be issued only after approval and may take up to 10-30 business days depending on the payment method. 
+                    If the original payment method is unavailable, refunds will be processed via bank transfer.
+                  </p>
+                </div>
+
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-foreground">Exchanges</h4>
+                  <p>
+                    We do not offer exchanges for any orders, including cases of incorrect sizing. 
+                    If you need a different size, please place a new order.
+                  </p>
+                </div>
+
+                <p className="text-xs italic">
+                  Our team will review your request and confirm whether a refund is approved. Further steps will be informed via email.
+                </p>
               </AccordionContent>
             </AccordionItem>
 
