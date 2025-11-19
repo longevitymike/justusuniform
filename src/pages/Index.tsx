@@ -72,13 +72,13 @@ const Index = () => {
               />
             </div>
             <p className="body-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Just us is a vibrant kids uniform pant company dedicated to creating stylish, comfortable and durable apparel. Combining playful design with sleek craftsmanship, we empower kids to be themselves while enjoying their everyday adventures. Our mission is to dress the future with confidence and joy because when kids feel good, they do great.
+              Just us is a vibrant kids uniform pant company dedicated to creating stylish, comfortable and durable apparel. Combining playful design with sleek craftsmanship, we empower kids to be themselves while enjoying their everyday adventures. Our mission is to dress the future with confidence and joy because when kids feel good, they do great!
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center pt-4 lg:pt-6">
               <a 
                 href="/product/just-us-uniform-pants"
-                className="group relative inline-flex items-center justify-center tap-target h-14 sm:h-16 px-8 lg:px-12 bg-primary text-primary-foreground font-bold text-base sm:text-lg rounded-full uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="group relative inline-flex items-center justify-center tap-target h-14 sm:h-16 px-8 lg:px-12 bg-brand-green text-white font-bold text-base sm:text-lg rounded-full uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 aria-label="Shop now"
               >
                 Shop Now
@@ -87,7 +87,7 @@ const Index = () => {
                 href={import.meta.env.VITE_AMAZON_STORE_URL || "#"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center justify-center tap-target h-14 sm:h-16 px-8 lg:px-12 bg-secondary text-secondary-foreground font-bold text-base sm:text-lg rounded-full uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="group relative inline-flex items-center justify-center tap-target h-14 sm:h-16 px-8 lg:px-12 bg-brand-yellow text-brand-navy font-bold text-base sm:text-lg rounded-full uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 aria-label="Buy on Amazon"
               >
                 Buy on Amazon
@@ -102,7 +102,7 @@ const Index = () => {
       <section className="section-padding bg-gradient-to-b from-card/30 to-background">
         <div className="container mx-auto container-spacing">
           <div className="max-w-4xl mx-auto text-center space-y-6 lg:space-y-8">
-            <h2 className="heading-md">Where Comfort Meets Confidence</h2>
+            <h2 className="heading-md text-brand-green">Where Comfort Meets Confidence</h2>
             <p className="body-lg text-muted-foreground leading-relaxed">
               At Just Us, we believe every child deserves to <span className="text-primary font-semibold">sparkle in comfort and style</span>. 
               Our playful yet sleek pants are crafted with high-quality materials, ensuring durability and all-day comfort. 
@@ -130,7 +130,7 @@ const Index = () => {
       {/* Products Section */}
       <section className="section-padding">
         <div className="container mx-auto container-spacing">
-          <h2 className="heading-md text-center mb-12 lg:mb-16">Our Uniforms</h2>
+          <h2 className="heading-md text-center mb-12 lg:mb-16 text-brand-green">Our Uniforms</h2>
           
           {loading ? (
             <div className="flex justify-center items-center py-20 lg:py-32">

@@ -27,6 +27,7 @@ All colors MUST be HSL.
     --brand-green: 95 47% 30%; /* #4A7729 - Deep olive */
     --brand-navy: 215 42% 20%; /* #1E3A5F - Navy pants */
     --brand-accent: 192 76% 63%; /* #59CBE8 - Pantone 305C */
+    --brand-yellow: 45 100% 50%; /* #FFAA00 - Amazon yellow */
     
     /* Theme Variables */
     --background: 0 0% 100%;
