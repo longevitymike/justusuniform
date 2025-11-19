@@ -7,7 +7,7 @@ import { UGCCarousel } from "@/components/UGCCarousel";
 import { LogoLoop } from "@/components/LogoLoop";
 import { SchoolFinder } from "@/components/SchoolFinder";
 import { ShopifyProduct, getProducts } from "@/lib/shopify";
-import { Loader2, Package, Flame } from "lucide-react";
+import { Loader2, Package, Flame, Sparkles, Heart, Settings, Shield } from "lucide-react";
 import logo from "@/assets/logo.png";
 import logoHero from "@/assets/logo-hero.png";
 import heroImage from "@/assets/hero-kids-grass-legs.jpg";
@@ -85,6 +85,28 @@ const Index = () => {
               Our playful yet sleek pants are crafted with high-quality materials, ensuring durability and all-day comfort. 
               From school to play, Just Us empowers kids to be themselves and feel special every day.
             </p>
+          </div>
+
+          {/* Feature Icons */}
+          <div className="max-w-5xl mx-auto mt-12 lg:mt-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+              <div className="flex flex-col items-center text-center gap-3 p-6 rounded-xl bg-muted/30 hover:bg-muted/50 transition-all duration-300 hover:scale-105">
+                <Sparkles className="h-10 w-10 text-primary flex-shrink-0" />
+                <span className="text-base lg:text-lg font-semibold">Sleek Design</span>
+              </div>
+              <div className="flex flex-col items-center text-center gap-3 p-6 rounded-xl bg-muted/30 hover:bg-muted/50 transition-all duration-300 hover:scale-105">
+                <Heart className="h-10 w-10 text-primary flex-shrink-0" />
+                <span className="text-base lg:text-lg font-semibold">All-Day Comfort</span>
+              </div>
+              <div className="flex flex-col items-center text-center gap-3 p-6 rounded-xl bg-muted/30 hover:bg-muted/50 transition-all duration-300 hover:scale-105">
+                <Settings className="h-10 w-10 text-primary flex-shrink-0" />
+                <span className="text-base lg:text-lg font-semibold">Adjustable Waistband</span>
+              </div>
+              <div className="flex flex-col items-center text-center gap-3 p-6 rounded-xl bg-muted/30 hover:bg-muted/50 transition-all duration-300 hover:scale-105">
+                <Shield className="h-10 w-10 text-primary flex-shrink-0" />
+                <span className="text-base lg:text-lg font-semibold">Durable Construction</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
