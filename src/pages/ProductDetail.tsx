@@ -259,7 +259,7 @@ const ProductDetail = () => {
 
             {/* Premium Stretch Materials */}
             <div className="space-y-3 lg:space-y-4">
-              <h3 className="font-bold text-lg lg:text-xl text-brand-green">Premium Stretch Materials</h3>
+              <h3 className="font-bold text-lg lg:text-xl text-brand-green">Premium Stretch Material</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
                 <div className="flex flex-col items-center text-center gap-2 p-4 rounded-lg bg-muted/30">
                   <Sparkles className="h-8 w-8 text-primary flex-shrink-0" />
