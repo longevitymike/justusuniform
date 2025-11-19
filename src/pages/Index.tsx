@@ -11,11 +11,9 @@ import { Loader2, Package, Flame } from "lucide-react";
 import logo from "@/assets/logo.png";
 import logoHero from "@/assets/logo-hero.png";
 import heroImage from "@/assets/hero-kids-grass-legs.jpg";
-
 const Index = () => {
   const [products, setProducts] = useState<ShopifyProduct[]>([]);
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const loadProducts = async () => {
       try {
@@ -27,69 +25,48 @@ const Index = () => {
         setLoading(false);
       }
     };
-
     loadProducts();
   }, []);
 
   // Lazy load reveal animation
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in');
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-    
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     return () => observer.disconnect();
   }, [products]);
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
       <section className="relative min-h-[90vh] lg:min-h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        >
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+        backgroundImage: `url(${heroImage})`
+      }}>
           <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background/60" />
         </div>
         
         <div className="container mx-auto container-spacing relative z-10 text-center">
           <div className="max-w-5xl mx-auto space-y-6 lg:space-y-8">
             <div className="flex justify-center mb-6 lg:mb-8">
-              <img 
-                src={logoHero} 
-                alt="Just Us Uniform" 
-                className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-contain"
-              />
+              <img src={logoHero} alt="Just Us Uniform" className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-contain" />
             </div>
             <p className="body-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Just us is a vibrant kids uniform pant company dedicated to creating stylish, comfortable and durable apparel. Combining playful design with sleek craftsmanship, we empower kids to be themselves while enjoying their everyday adventures. Our mission is to dress the future with confidence and joy because when kids feel good, they do great!
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center pt-4 lg:pt-6">
-              <a 
-                href="/product/just-us-uniform-pants"
-                className="group relative inline-flex items-center justify-center tap-target h-14 sm:h-16 px-8 lg:px-12 bg-brand-green text-white font-bold text-base sm:text-lg rounded-full uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                aria-label="Shop now"
-              >
+              <a href="/product/just-us-uniform-pants" className="group relative inline-flex items-center justify-center tap-target h-14 sm:h-16 px-8 lg:px-12 bg-brand-green text-white font-bold text-base sm:text-lg rounded-full uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg" aria-label="Shop now">
                 Shop Now
               </a>
-              <a 
-                href={import.meta.env.VITE_AMAZON_STORE_URL || "#"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative inline-flex items-center justify-center tap-target h-14 sm:h-16 px-8 lg:px-12 bg-brand-yellow text-brand-navy font-bold text-base sm:text-lg rounded-full uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                aria-label="Buy on Amazon"
-              >
+              <a href={import.meta.env.VITE_AMAZON_STORE_URL || "#"} target="_blank" rel="noopener noreferrer" className="group relative inline-flex items-center justify-center tap-target h-14 sm:h-16 px-8 lg:px-12 bg-brand-yellow text-brand-navy font-bold text-base sm:text-lg rounded-full uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg" aria-label="Buy on Amazon">
                 Buy on Amazon
               </a>
             </div>
@@ -132,22 +109,14 @@ const Index = () => {
         <div className="container mx-auto container-spacing">
           <h2 className="heading-md text-center mb-12 lg:mb-16 text-brand-green">Our Uniforms</h2>
           
-          {loading ? (
-            <div className="flex justify-center items-center py-20 lg:py-32">
+          {loading ? <div className="flex justify-center items-center py-20 lg:py-32">
               <Loader2 className="h-12 w-12 lg:h-16 lg:w-16 animate-spin text-primary" />
-            </div>
-          ) : products.length > 0 ? (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
-              {products.map((product) => (
-                <ProductCard key={product.node.id} product={product} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-20 lg:py-32 space-y-6">
+            </div> : products.length > 0 ? <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
+              {products.map(product => <ProductCard key={product.node.id} product={product} />)}
+            </div> : <div className="text-center py-20 lg:py-32 space-y-6">
               <Package className="h-16 w-16 lg:h-20 lg:w-20 text-muted-foreground mx-auto" />
               <p className="text-xl lg:text-2xl text-muted-foreground">No products found</p>
-            </div>
-          )}
+            </div>}
         </div>
       </section>
 
@@ -167,7 +136,7 @@ const Index = () => {
             <div className="col-span-2 md:col-span-1 space-y-4">
               <img src={logo} alt="Just Us Uniform" className="h-12 w-12 lg:h-14 lg:w-14 rounded-full" />
               <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">
-                Dressing the future with confidence and joy. Because when kids feel good, they do great.
+                Dressing the future with confidence and joy. Because when kids feel good, they do great!
               </p>
             </div>
             
@@ -202,8 +171,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
