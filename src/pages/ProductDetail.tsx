@@ -412,9 +412,6 @@ const ProductDetail = () => {
                 }, {
                   text: "These survived a full week of recess. I'm ordering 3 more pairs!",
                   author: "Michael T."
-                }, {
-                  text: "The stain-resistant fabric is a game changer. No more grass stains!",
-                  author: "Lisa R."
                 }].map((review, idx) => <div key={idx} className="min-w-full bg-secondary/10 rounded-lg p-4 border border-border flex-shrink-0">
                       <div className="flex items-center gap-1 mb-2">
                         {[1, 2, 3, 4, 5].map(star => <Star key={star} className="h-4 w-4 fill-[hsl(var(--brand-orange))] stroke-[hsl(var(--brand-navy))] stroke-[1.5]" style={{
@@ -519,13 +516,6 @@ const ProductDetail = () => {
                     <td className="p-4 lg:p-6 text-center text-muted-foreground">—</td>
                   </tr>
                   <tr className="border-b border-border bg-muted/20">
-                    <td className="p-4 lg:p-6 font-medium">Stain-resistant</td>
-                    <td className="p-4 lg:p-6 text-center">
-                      <Check className="h-5 w-5 lg:h-6 lg:w-6 text-primary mx-auto" />
-                    </td>
-                    <td className="p-4 lg:p-6 text-center text-muted-foreground">—</td>
-                  </tr>
-                  <tr className="border-b border-border">
                     <td className="p-4 lg:p-6 font-medium">Designed by kids</td>
                     <td className="p-4 lg:p-6 text-center">
                       <Check className="h-5 w-5 lg:h-6 lg:w-6 text-primary mx-auto" />
@@ -629,7 +619,7 @@ const ProductDetail = () => {
                 <span className="text-left font-semibold text-base lg:text-lg">How do I care for these pants?</span>
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4 text-sm lg:text-base text-muted-foreground">
-                Super easy! Machine wash cold with like colors, tumble dry low. The fabric is wrinkle-resistant and stain-resistant, so they look great wash after wash. No special treatment needed—just toss them in with the regular laundry.
+                Super easy! Machine wash cold with like colors, tumble dry low. The fabric is wrinkle-resistant, so they look great wash after wash. No special treatment needed—just toss them in with the regular laundry.
               </AccordionContent>
             </AccordionItem>
 

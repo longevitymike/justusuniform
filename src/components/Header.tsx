@@ -11,9 +11,6 @@ export const Header = () => {
         </Link>
         
         <nav className="flex items-center gap-2 lg:gap-4" aria-label="Main navigation">
-          <Link to="/" className="text-sm lg:text-base font-medium hover:text-primary transition-colors hidden sm:block tap-target px-2 py-2">
-            Shop
-          </Link>
           <Link to="/size-guide" className="text-sm lg:text-base font-medium hover:text-primary transition-colors hidden md:block tap-target px-2 py-2">
             Size Guide
           </Link>
